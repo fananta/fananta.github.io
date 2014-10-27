@@ -1,0 +1,110 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600);
+
+* {
+	font-family: 'Josefin Sans', serif;
+	letter-spacing: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+/* TITLE */
+
+.page-title {
+	font-size: 60px;
+	font-weight: 100;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+span.uber-u {
+	color: #4A90E2;
+	margin-right: -20px;
+}
+
+span.uber-b {
+	color: #F2E174;
+	margin-right: -20px;
+}
+
+span.uber-e {
+	color: #8AF7AB;
+	margin-right: -20px;
+}
+
+span.uber-r {
+	color: #F7A585;
+	margin-right: -20px;
+}
+
+/* CONTAINERS */
+
+.container-wrapper {
+	width: 762px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 100px;
+}
+
+.container {
+	width: 250px;
+	height: 443px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	float: left;
+}
+
+.container:hover {
+	opacity: 0.7;
+}
+
+.container-profile-pic {
+	text-align: center;
+	padding-top: 40px;
+	overflow: hidden;
+}
+
+.container-profile-pic img {
+	width: 150px;
+	height: 150px;
+	border-radius: 1000px;
+}
+
+.container-author {
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 20px;
+}
+
+.container-bio {
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 20px;
+}
+
+.a {
+	background-color: #81DDF9;
+}
+
+.b {
+	background-color: #F2E174;
+}
+
+.c {
+	background-color: #8AF7AB;
+}
+
+.d {
+	background-color: #9F8FEA;
+}
+
+.e {
+	background-color: #F7A585;
+}
