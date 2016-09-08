@@ -171,4 +171,19 @@ input {
 								color: #999;
 								font-size: 14px;
 							}
+	.subscribe {
+		margin-bottom: 50px;
+		padding: 20px;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 700;
+		color: #616163;
+		background-color: #FFEFEC;
+		border-radius: 4px;
+	}
+		.subscribe span {
+			color: #FF6347;
+			font-weight: 700;
+			border-bottom: 1px solid;
+		}
 
