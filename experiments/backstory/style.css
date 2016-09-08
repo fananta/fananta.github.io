@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Harmattan');
+
+* {
+	font-family: 'Harmattan', sans-serif;
+	outline: none;
+	color: #4A4A4A;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: inherit;
+}
+
+body {
+	margin: 0;
+	background-color: #FFF;
+}
+
+input {
+	-webkit-appearance: none;
+}
+
+
+.header {
+	margin: 80px 0;
+	text-align: center;
+}
+	.header .title {
+		font-size: 40px;
+		font-weight: 700;
+		letter-spacing: 2px;
+	}
+	.header .description {
+		font-size: 20px;
+		width: 90%;
+		max-width: 600px;
+		margin: auto;
+	}
+
+.container {
+	/*background-color: lightgrey;*/
+	width: 90%;
+	max-width: 800px;
+	margin: auto;
+}
+	.container table {
+		margin-bottom: 40px;
+	}
+		.container table tr {
+			width: 100%;
+			height: 40px;
+		}
+			.container table tr td {
+				/*border: 1px solid red;*/
+				font-size: 18px;
+			}
+				.container table tr td.icon {
+					width: 40px;
+					text-align: center;
+				}
+					.container table tr td.icon img {
+						width: 32px;
+						height: 32px;
+					}
+				.container table tr td.event {
+					padding: 0 50px;
+					font-weight: 700;
+				}
+					.container table tr td.event.sunrise {
+						font-size: 16px;
+						letter-spacing: 1px;
+						padding-top: 5px;
+						/*text-transform: uppercase;*/
+					}
+						.container table tr td.event.sunrise span {
+							color: #FFF;
+							background-color: #FF6347;
+							padding-top: 5px;
+							padding-bottom: 2px;
+							padding-left: 16px;
+							padding-right: 14px;
+							border-radius: 100px;
+						}
+				.container table tr td.content {
+					padding-left: 50px;
+					padding-right: 20px;
+				}
+					.container table tr td.content div.comment {
+						color: #616163;
+					}
+					.container table tr td.content div.foursquare {
+						color: #FC4575;
+						font-size: 14px;
+						margin-top: 10px;
+						width: 150px;
+						background-color: #FFF;
+						
+						border: 1px solid #FC4575;
+						border-radius: 100px;
+						border-top-left-radius: 0;
+						box-shadow: 0 0 4px 0 #FC4575;
+						padding: 10px 0;
+						padding-bottom: 8px;
+
+						text-align: center;
+					}
+						.container table tr td.content div.foursquare span.bold {
+							color: inherit;
+							font-weight: 700;
+						}
+					.container table tr td.content div.tripadvisor {
+						color: #57973E;
+						font-size: 14px;
+						margin-top: 10px;
+						width: 150px;
+						background-color: #FFF;
+						
+						border: 1px solid #57973E;
+						border-radius: 100px;
+						border-top-left-radius: 0;
+						box-shadow: 0 0 4px 0 #57973E;
+						padding: 10px 0;
+						padding-bottom: 8px;
+
+						text-align: center;
+					}
+						.container table tr td.content div.tripadvisor span.bold {
+							color: inherit;
+							font-weight: 700;
+						}
+					.container table tr td.content div.airbnb {
+						max-width: 500px;
+						width: 100%;
+						margin-top: 10px;
+						padding: 20px;
+
+						border: 1px solid #EFEFEF;
+						border-radius: 4px;
+						box-shadow: 0 0 4px 0 #EFEFEF;
+					}
+						.container table tr td.content div.airbnb div.image img {
+							width: 100%;
+							border-radius: 4px;
+						}
+						.container table tr td.content div.airbnb div.name {
+							margin-top: 20px;
+							font-weight: 700;
+							font-size: 16px;
+						}
+						.container table tr td.content div.airbnb div.details {
+							font-size: 16px;
+						}
+							.container table tr td.content div.airbnb div.details i {
+								font-size: 14px;
+								color: #FFB500;
+							}
+							.container table tr td.content div.airbnb div.details span.reviews {
+								color: #999;
+								font-size: 14px;
+							}
+
