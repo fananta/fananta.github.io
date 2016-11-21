@@ -60,7 +60,7 @@
 			</div>
 			<div id="highlight"></div>
 
-			<a href="index.html"><div id="done-button">Done</div></a>
+			<div id="done-button">Done</div>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -81,6 +81,8 @@
 					$(window).scrollTop(0)
 					clearInterval(reading_timer)
 					console.log('done', duration)
+					form_url = 'https://docs.google.com/forms/d/e/1FAIpQLSdEyf4opz_sujMwE-WyWMfIN6J3YXzrXE2GIIXC4aV7FPEL7A/viewform?entry.1183639736='
+					window.location.href = form_url + duration;
 				})
 
 				// highlight display method
