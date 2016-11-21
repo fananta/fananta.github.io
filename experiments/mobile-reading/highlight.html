@@ -1,105 +1,110 @@
-<meta name=viewport content="width=device-width, initial-scale=1">
-<meta name="mobile-web-app-capable" content="yes">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<html>
+	<head>
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	</head>
 
-<body>
+	<body>
+		<style>
+			* { margin: 0; }
+			a { text-decoration: none; color: inherit; }
+			#text {
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 20px;
+				line-height: 1.6;
+				padding: 0px 40px;
+				padding-top: 100px;
+				padding-bottom: 300px;
+				color: #4A4A4A;
+			}
+			#highlight {
+				background-color: yellow;
+				opacity: 0.3;
+				height: 32px;
+				width: 100%;
+				z-index: -1;
+				position: fixed;
+				top: 100px;			
+			}
+			#done-button, #continue-button {
+				font-family: 'Source Sans Pro', sans-serif;
+				background-color: #03CC32;
+				text-align: center;
+				margin: auto;
+				margin-bottom: 40px;
+				color: #FFF;
+				width: 160px;
+				padding: 15px 0;
+				border-radius: 2px;
+				text-transform: uppercase;
+				letter-spacing: 1.2;
+				font-weight: bold;
+				font-size: 14px;
+				cursor: pointer;
+				bottom: 0;
+			}
+		</style>
 
-	<style>
-		* { margin: 0; }
-		a { text-decoration: none; color: inherit; }
-		#text {
-			font-family: 'Source Sans Pro', sans-serif;
-			font-size: 20px;
-			line-height: 1.6;
-			padding: 0px 40px;
-			padding-top: 100px;
-			padding-bottom: 300px;
-			color: #4A4A4A;
-		}
-		#highlight {
-			background-color: yellow;
-			opacity: 0.3;
-			height: 32px;
-			width: 100%;
-			z-index: -1;
-			position: fixed;
-			top: 100px;			
-		}
-		#done-button, #continue-button {
-			font-family: 'Source Sans Pro', sans-serif;
-			background-color: #03CC32;
-			text-align: center;
-			margin: auto;
-			margin-bottom: 40px;
-			color: #FFF;
-			width: 160px;
-			padding: 15px 0;
-			border-radius: 2px;
-			text-transform: uppercase;
-			letter-spacing: 1.2;
-			font-weight: bold;
-			font-size: 14px;
-			cursor: pointer;
-			bottom: 0;
-		}
-	</style>
+		<div id="warmup">
+			<div id="text">
+				Scientifically, Mars is our destination because scientists have determined that Mars is the most likely place to find evidence of life beyond Earth. Water, which is critical to life, was stable on the surface of Mars for around a billion years. Based on what we know about the evolution of life on Earth, life is likely to have arisen on Mars. In that time period, life may not have gotten very complex, so it will likely take astrobiologists and geologists on the surface of Mars to find evidence of ancient microbial life. The evidence of liquid water on the surface of Mars also makes scientists wonder if life could have persisted on Mars, moving underground as conditions became increasingly inhospitable at the surface.
+			</div>
+			<div id="highlight"></div>
 
-	<div id="warmup">
-		<div id="text">
-			Scientifically, Mars is our destination because scientists have determined that Mars is the most likely place to find evidence of life beyond Earth. Water, which is critical to life, was stable on the surface of Mars for around a billion years. Based on what we know about the evolution of life on Earth, life is likely to have arisen on Mars. In that time period, life may not have gotten very complex, so it will likely take astrobiologists and geologists on the surface of Mars to find evidence of ancient microbial life. The evidence of liquid water on the surface of Mars also makes scientists wonder if life could have persisted on Mars, moving underground as conditions became increasingly inhospitable at the surface.
+			<div id="continue-button">Continue</div>
 		</div>
-		<div id="highlight"></div>
 
-		<div id="continue-button">Continue</div>
-	</div>
+		<div id="experiment">
+			<div id="text">
+				There is a lot of talk about the Moon as a colony for mankind, a second home outside of earth. This is the first in a series where we will look at how mankind will need to re-imagine everything when we aspire to a multi-planetary life. The moon presents unique problems that requires us to rethink the way we construct “housing”. The first and the most pressing problem is the lack of atmosphere. This manifests into a multitude of other bigger issues, such as temperature regulation, radiation exposure, and more. Lack of atmosphere first means that humans don’t have anything to breathe. This requires people outside any habitat to wear space suits all the time. Within the habitat, an airtight setting needs to be ensured to make sure there’s breathability. Because there is no atmosphere to regulate the temperature, the days on the moon are searing hot while the nights are painfully freezing. All habitats must be able to keep excess heat out while retaining heat within after sunset. A good way to achieve this, theoretically, could be to have a power source inside habs that heat it, while all the heat is kept out. However, a more practical solution (in all space travel) is to harness the infinite solar energy with effective panels. One of the popular ideas to protect a base is using the lunar soil (“regolith”) itself. Piling mounds and mounds of the regolith on a habitat could effectively insulate it against the sun, leaving few sun window-like structures open to harness the solar energy. A more natural resource available to protect against the heat and the radiation is using the moon’s natural underground lava tubes. Lava tubes are structures that are formed when lava flows below an already solidified layer of previously molten rock, carving out neat, navigate-able tunnels within. Needless to say, the moon had indeed once been volcanically active, creating these tubes of communication underneath. Habitats in artist simulations are always shown as inflatable. This is for a good reason. Considering the current costs of flying stuff out into space, it would be much more expensive to carry things on to the moon and fit them, while the option of collapsing everything and carrying it as a whole exists. The only way for us to build things on the moon directly, it appears, is 3D printing! A 3D printing company in the UK called Monolite showed a simulation of a timelapse of a 3D printed shell being assembled over a habitat. Perhaps in the future, after the first colony is established, we could use the materials found on the moon itself to build new homes there.
+			</div>
+			<div id="highlight"></div>
 
-	<div id="experiment">
-		<div id="text">
-			There is a lot of talk about the Moon as a colony for mankind, a second home outside of earth. This is the first in a series where we will look at how mankind will need to re-imagine everything when we aspire to a multi-planetary life. The moon presents unique problems that requires us to rethink the way we construct “housing”. The first and the most pressing problem is the lack of atmosphere. This manifests into a multitude of other bigger issues, such as temperature regulation, radiation exposure, and more. Lack of atmosphere first means that humans don’t have anything to breathe. This requires people outside any habitat to wear space suits all the time. Within the habitat, an airtight setting needs to be ensured to make sure there’s breathability. Because there is no atmosphere to regulate the temperature, the days on the moon are searing hot while the nights are painfully freezing. All habitats must be able to keep excess heat out while retaining heat within after sunset. A good way to achieve this, theoretically, could be to have a power source inside habs that heat it, while all the heat is kept out. However, a more practical solution (in all space travel) is to harness the infinite solar energy with effective panels. One of the popular ideas to protect a base is using the lunar soil (“regolith”) itself. Piling mounds and mounds of the regolith on a habitat could effectively insulate it against the sun, leaving few sun window-like structures open to harness the solar energy. A more natural resource available to protect against the heat and the radiation is using the moon’s natural underground lava tubes. Lava tubes are structures that are formed when lava flows below an already solidified layer of previously molten rock, carving out neat, navigate-able tunnels within. Needless to say, the moon had indeed once been volcanically active, creating these tubes of communication underneath. Habitats in artist simulations are always shown as inflatable. This is for a good reason. Considering the current costs of flying stuff out into space, it would be much more expensive to carry things on to the moon and fit them, while the option of collapsing everything and carrying it as a whole exists. The only way for us to build things on the moon directly, it appears, is 3D printing! A 3D printing company in the UK called Monolite showed a simulation of a timelapse of a 3D printed shell being assembled over a habitat. Perhaps in the future, after the first colony is established, we could use the materials found on the moon itself to build new homes there.
+			<a href="index.html"><div id="done-button">Done</div></a>
 		</div>
-		<div id="highlight"></div>
 
-		<a href="index.html"><div id="done-button">Done</div></a>
-	</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				// running the experiment
+				var duration = 0
+				$('#experiment').hide()
+				$('#continue-button').on('click', function() {
+					$('#warmup').hide()
+					$('#experiment').show()
+					$(window).scrollTop(0)
+					reading_timer = setInterval(function () { ++duration; console.log(duration) }, 1000)
+				})
+				$('#done-button').on('click', function() {
+					$('#warmup').hide()
+					$('#experiment').show()
+					$(window).scrollTop(0)
+					clearInterval(reading_timer)
+					console.log('done', duration)
+				})
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			// running the experiment
-			var duration = 0
-			$('#experiment').hide()
-			$('#continue-button').on('click', function() {
-				$('#warmup').hide()
-				$('#experiment').show()
-				$(window).scrollTop(0)
-				reading_timer = setInterval(function () { ++duration; console.log(duration) }, 1000)
-			})
-			$('#done-button').on('click', function() {
-				$('#warmup').hide()
-				$('#experiment').show()
-				$(window).scrollTop(0)
-				clearInterval(reading_timer)
-				console.log('done', duration)
-			})
-
-			// highlight display method
-			var timer
-			$(window).on('scroll', function() {
-				if (timer) {
-					clearTimeout(timer);
-				}
-				timer = setTimeout(function() {
-					var y = window.scrollY;
-					var offset = (y % 32) * -1;
-					if (offset < 0) {
-						offset = 32 - (offset * -1);
+				// highlight display method
+				var timer
+				$(window).on('scroll', function() {
+					if (timer) {
+						clearTimeout(timer);
 					}
-					$('#warmup #highlight').css('marginTop', offset)
-					$('#experiment #highlight').css('marginTop', offset)
-				}, 150)
+					timer = setTimeout(function() {
+						var y = window.scrollY;
+						var offset = (y % 32) * -1;
+						if (offset < 0) {
+							offset = 32 - (offset * -1);
+						}
+						$('#warmup #highlight').css('marginTop', offset)
+						$('#experiment #highlight').css('marginTop', offset)
+					}, 150)
+				})
 			})
-		})
-	</script>
+		</script>
+	</body>
+</html>
 
 
-</body>
