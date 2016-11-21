@@ -1,22 +1,8 @@
 <html>
 	<head>
 		<meta name=viewport content="width=device-width, initial-scale=1">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="mobile-web-app-capable" content="yes">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-
-		<script>
-			if(("standalone" in window.navigator) && window.navigator.standalone){
-			    var noddy, remotes = false;
-			    document.addEventListener('click', function(event) {
-			        noddy = event.target;
-			        while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") { noddy = noddy.parentNode; }
-			        if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
-			        { event.preventDefault(); document.location.href = noddy.href; }
-			    },false);
-			}
-		</script>
 	</head>
 
 	<body>
@@ -29,7 +15,7 @@
 				line-height: 1.6;
 				padding: 0px 40px;
 				padding-top: 100px;
-				padding-bottom: 300px;
+				padding-bottom: 350px;
 				color: #CCC;
 			}
 			#text .line[first]{
