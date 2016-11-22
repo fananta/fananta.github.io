@@ -17,14 +17,8 @@
 				padding-bottom: 350px;
 				color: #4A4A4A;
 			}
-			#highlight {
-				background-color: yellow;
-				opacity: 0.3;
-				height: 32px;
-				width: 100%;
-				z-index: -1;
-				position: fixed;
-				top: 100px;			
+			#text .line[first]{
+				background-color: #FFF682;
 			}
 			#done-button, #continue-button {
 				font-family: 'Source Sans Pro', sans-serif;
@@ -46,7 +40,7 @@
 		</style>
 
 		<div id="warmup">
-			<div id="text">
+			<div id="text" data-lining>
 				In August 2007, an oil worker named Soren Stig looked over the side of a rig in the middle of the Persian Gulf, and saw a horde of giants. They were whale sharks—the world’s largest fish, with a cavernous mouth and a back that looks like a field of stars. They live throughout the tropical oceans and often gather en masse to feed on plankton and fish eggs.
 			</div>
 			<div id="highlight"></div>
@@ -55,15 +49,15 @@
 		</div>
 
 		<div id="experiment">
-			<div id="text">
+			<div id="text" data-lining>
 				Karl is long gone now. I first met him when he was 75 and I was in my early 20’s. A farmer friend of mine who lived across the road from Karl’s farm introduced us. Karl was born in Denmark near the start of the last century. He had come to Canada in the mid 1920’s, an optimistic young man in his own early 20’s, lured by the government of the day’s offer of free land to farm. The land turned out to be in Manitoba, north of Winnipeg. After a few years Karl moved to Southern Ontario where the land was better and the winters were shorter and not as harsh. When my friend and I knocked on Karl’s door it was mid-afternoon and we were ushered into the kitchen, the normal farm home visiting spot that usually has its own convenient outside door. Karl had already been a widower for a few years but some vestiges of a woman’s touch still remained in the room with its old wooden chairs and worn linoleum floor. His kids had long since grown up and left the farm, so Karl lived alone. He was wearing the standard farmer work clothes: faded green work pants and shirt, suspenders and a matching cap. Karl was old school so his cap was plain, without the logo of some seed company or tractor manufacturer. Karl’s attitude was old school too. He came from a time when farming was a way of life rather than a job or a “career path”. He was cynical, suspicious of politicians, suspicious of the government and anything they did that resembled central planning, suspicious of bankers and businessmen that set the prices and controlled the markets. His voice had a tone of mild amusement, as did his expression and the twinkle in his eye. We discussed the usual topics of interest to farmers: the weather, the economy, politics and current events. I then asked him some inane question about farming and how he got started and his answer has stuck with me ever since. In many ways it sums up not just farming but much about our modern world, the economy and life in general. He paused, looked at me for a while as if to ask “are you serious?” and then replied as follows: “When I started farming I grew some corn. I got a pig and built a shed for it. I fed it the corn and shovelled the shit into a pile outside. The next year I spread the shit on the field and grew more corn, enough to feed a couple of pigs. I had a bigger pile of shit. I spread the shit on the field and grew even more corn. I got a few more pigs so I had to build a barn. The pile of shit got even bigger, so big that I had to get a tractor with a loader to move it around and spread it on the field. I grew a whole lot more corn, enough to feed way more pigs so I had to put an addition on the barn. I have been doing this over and over again every year for almost fifty years. Now I have a really big pile of shit.”
 			</div>
-			<div id="highlight"></div>
 
 			<div id="done-button">Done</div>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/lining.js/0.3.3/lining.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				// running the experiment
@@ -85,22 +79,20 @@
 					window.location.href = form_url + duration;
 				})
 
-				// highlight display method
-				var timer
+				// higlight display method
+				var text_cursor = $('.line').first();
+				var last_scroll = 0;
 				$(window).on('scroll', function() {
-					if (timer) {
-						clearTimeout(timer);
+					var y = $(window).scrollTop();
+					var line = Math.round(y / 32);
+					if (line == 0){
+						$('#text .line').css('background-color', "transparent");
+						$('#text .line[first]').css('background-color', "#FFF682");
+					} else {
+						$('#text .line').css('background-color', "transparent");
+						$(`#text .line:nth-of-type(${line})`).css('background-color', "#FFF682");
 					}
-					timer = setTimeout(function() {
-						var y = window.scrollY;
-						var offset = (y % 32) * -1;
-						if (offset < 0) {
-							offset = 32 - (offset * -1);
-						}
-						$('#warmup #highlight').css('marginTop', offset)
-						$('#experiment #highlight').css('marginTop', offset)
-					}, 150)
-				})
+				});
 			})
 		</script>
 	</body>

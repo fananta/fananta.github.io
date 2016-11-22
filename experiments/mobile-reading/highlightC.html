@@ -17,14 +17,8 @@
 				padding-bottom: 350px;
 				color: #4A4A4A;
 			}
-			#highlight {
-				background-color: yellow;
-				opacity: 0.3;
-				height: 32px;
-				width: 100%;
-				z-index: -1;
-				position: fixed;
-				top: 100px;			
+			#text .line[first]{
+				background-color: #FFF682;
 			}
 			#done-button, #continue-button {
 				font-family: 'Source Sans Pro', sans-serif;
@@ -46,7 +40,7 @@
 		</style>
 
 		<div id="warmup">
-			<div id="text">
+			<div id="text" data-lining>
 				In August 2007, an oil worker named Soren Stig looked over the side of a rig in the middle of the Persian Gulf, and saw a horde of giants. They were whale sharks—the world’s largest fish, with a cavernous mouth and a back that looks like a field of stars. They live throughout the tropical oceans and often gather en masse to feed on plankton and fish eggs.
 			</div>
 			<div id="highlight"></div>
@@ -55,15 +49,15 @@
 		</div>
 
 		<div id="experiment">
-			<div id="text">
+			<div id="text" data-lining>
 				In 2015, NASA released a document that described how we get from where we are today to boots on Mars. This involves continuing our research on the International Space Station (ISS), then moving humans beyond low-Earth orbit to the proving ground — the region near the moon where we can push the limits of our capabilities in a place where we can safely return astronauts home in a few days. We will continue to robotically explore Mars — as we are currently doing as an international community with numerous spacecraft — from NASA’s Curiosity rover to India’s Mars Orbiter mission. We will use these and future missions to Mars to reduce the risks of landing humans on Mars, from better understanding the structure of Mars’ atmosphere to its potential for providing local resources for future explorers. By the 2030s, we will be ready to move humans toward the Red Planet. Private sector partnerships are critical to enable us as a global society to explore Mars. NASA has been working on this by turning over to the private sector some work that we no longer need to keep as government-only functions, like launching cargo to the ISS, and soon commercial companies will be shuttling humans to the space station. We also are testing new technologies with private companies on the ISS, such as 3D printers that could make space exploration more sustainable. In addition to exploration technology development and demonstrations on the ISS, we also are doing critical research to ensure that we can keep humans healthy for periods of time in space, mitigating health risks such as bone density loss and muscle atrophy. Some might wonder about why sending humans beyond low-Earth orbit to Mars is important, and whether it is worth the cost. Scientifically, Mars is our destination because scientists have determined that Mars is the most likely place to find evidence of life beyond Earth. Water, which is critical to life, was stable on the surface of Mars for around a billion years. Based on what we know about the evolution of life on Earth, life is likely to have arisen on Mars. In that time period, life may not have gotten very complex, so it will likely take astrobiologists and geologists on the surface of Mars to find evidence of ancient microbial life. The evidence of liquid water on the surface of Mars also makes scientists wonder if life could have persisted on Mars, moving underground as conditions became increasingly inhospitable at the surface.
 			</div>
-			<div id="highlight"></div>
 
 			<div id="done-button">Done</div>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/lining.js/0.3.3/lining.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				// running the experiment
@@ -85,22 +79,20 @@
 					window.location.href = form_url + duration;
 				})
 
-				// highlight display method
-				var timer
+				// higlight display method
+				var text_cursor = $('.line').first();
+				var last_scroll = 0;
 				$(window).on('scroll', function() {
-					if (timer) {
-						clearTimeout(timer);
+					var y = $(window).scrollTop();
+					var line = Math.round(y / 32);
+					if (line == 0){
+						$('#text .line').css('background-color', "transparent");
+						$('#text .line[first]').css('background-color', "#FFF682");
+					} else {
+						$('#text .line').css('background-color', "transparent");
+						$(`#text .line:nth-of-type(${line})`).css('background-color', "#FFF682");
 					}
-					timer = setTimeout(function() {
-						var y = window.scrollY;
-						var offset = (y % 32) * -1;
-						if (offset < 0) {
-							offset = 32 - (offset * -1);
-						}
-						$('#warmup #highlight').css('marginTop', offset)
-						$('#experiment #highlight').css('marginTop', offset)
-					}, 150)
-				})
+				});
 			})
 		</script>
 	</body>
