@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	</head>
+
+	<body>
+		<style>
+			* { margin: 0; }
+			a { text-decoration: none; color: inherit; }
+			#text {
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 20px;
+				line-height: 1.6;
+				padding: 0px 40px;
+				padding-top: 100px;
+				padding-bottom: 350px;
+				color: #4A4A4A;
+			}
+			#done-button, #continue-button {
+				font-family: 'Source Sans Pro', sans-serif;
+				background-color: #03CC32;
+				text-align: center;
+				margin: auto;
+				margin-bottom: 40px;
+				color: #FFF;
+				width: 160px;
+				padding: 15px 0;
+				border-radius: 2px;
+				text-transform: uppercase;
+				letter-spacing: 1.2;
+				font-weight: bold;
+				font-size: 14px;
+				cursor: pointer;
+				bottom: 0;
+			}
+		</style>
+
+		<div id="warmup">
+			<div id="text">
+				The flight between San Francisco and Los Angeles isn’t a long one, but time on the plane isn’t the only thing to consider: When all is said and done, total flying transportation time is about 10 hours. Cost of the plane ticket and taxi fare is nearly $450. What's more, in driving-focused Los Angeles, it's useful to have a car – you won't have one at your disposal if you fly.
+			</div>
+
+			<div id="continue-button">Continue</div>
+		</div>
+
+		<div id="experiment">
+			<div id="text">
+				Karl is long gone now. I first met him when he was 75 and I was in my early 20’s. A farmer friend of mine who lived across the road from Karl’s farm introduced us. Karl was born in Denmark near the start of the last century. He had come to Canada in the mid 1920’s, an optimistic young man in his own early 20’s, lured by the government of the day’s offer of free land to farm. The land turned out to be in Manitoba, north of Winnipeg. After a few years Karl moved to Southern Ontario where the land was better and the winters were shorter and not as harsh. When my friend and I knocked on Karl’s door it was mid-afternoon and we were ushered into the kitchen, the normal farm home visiting spot that usually has its own convenient outside door. Karl had already been a widower for a few years but some vestiges of a woman’s touch still remained in the room with its old wooden chairs and worn linoleum floor. His kids had long since grown up and left the farm, so Karl lived alone. He was wearing the standard farmer work clothes: faded green work pants and shirt, suspenders and a matching cap. Karl was old school so his cap was plain, without the logo of some seed company or tractor manufacturer. Karl’s attitude was old school too. He came from a time when farming was a way of life rather than a job or a “career path”. He was cynical, suspicious of politicians, suspicious of the government and anything they did that resembled central planning, suspicious of bankers and businessmen that set the prices and controlled the markets. His voice had a tone of mild amusement, as did his expression and the twinkle in his eye. We discussed the usual topics of interest to farmers: the weather, the economy, politics and current events. I then asked him some inane question about farming and how he got started and his answer has stuck with me ever since. In many ways it sums up not just farming but much about our modern world, the economy and life in general. He paused, looked at me for a while as if to ask “are you serious?” and then replied as follows: “When I started farming I grew some corn. I got a pig and built a shed for it. I fed it the corn and shovelled the shit into a pile outside. The next year I spread the shit on the field and grew more corn, enough to feed a couple of pigs. I had a bigger pile of shit. I spread the shit on the field and grew even more corn. I got a few more pigs so I had to build a barn. The pile of shit got even bigger, so big that I had to get a tractor with a loader to move it around and spread it on the field. I grew a whole lot more corn, enough to feed way more pigs so I had to put an addition on the barn. I have been doing this over and over again every year for almost fifty years. Now I have a really big pile of shit.”
+			</div>
+
+			<div id="done-button">Done</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				// running the experiment
+				var duration = 0
+				$('#experiment').hide()
+				$('#continue-button').on('click', function() {
+					$('#warmup').hide()
+					$('#experiment').show()
+					$(window).scrollTop(0)
+					reading_timer = setInterval(function () { ++duration; console.log(duration) }, 1000)
+				})
+				$('#done-button').on('click', function() {
+					$('#warmup').hide()
+					$('#experiment').show()
+					$(window).scrollTop(0)
+					clearInterval(reading_timer)
+					console.log('done', duration)
+					form_url = 'https://docs.google.com/forms/d/e/1FAIpQLSeSZHuPS3RYX-HXCIv6a_-v-xAldJbePokIutjJS0G3TzDGUw/viewform?entry.970383545='
+					window.location.href = form_url + duration;
+				})
+			})
+		</script>
+	</body>
+</html>
+

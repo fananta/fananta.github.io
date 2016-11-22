@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	</head>
+
+	<body>
+		<style>
+			* { margin: 0; }
+			a { text-decoration: none; color: inherit; }
+			#text {
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 20px;
+				line-height: 1.6;
+				padding: 0px 40px;
+				padding-top: 100px;
+				padding-bottom: 350px;
+				color: #4A4A4A;
+			}
+			#highlight {
+				background-color: yellow;
+				opacity: 0.3;
+				height: 32px;
+				width: 100%;
+				z-index: -1;
+				position: fixed;
+				top: 100px;			
+			}
+			#done-button, #continue-button {
+				font-family: 'Source Sans Pro', sans-serif;
+				background-color: #03CC32;
+				text-align: center;
+				margin: auto;
+				margin-bottom: 40px;
+				color: #FFF;
+				width: 160px;
+				padding: 15px 0;
+				border-radius: 2px;
+				text-transform: uppercase;
+				letter-spacing: 1.2;
+				font-weight: bold;
+				font-size: 14px;
+				cursor: pointer;
+				bottom: 0;
+			}
+		</style>
+
+		<div id="warmup">
+			<div id="text">
+				In August 2007, an oil worker named Soren Stig looked over the side of a rig in the middle of the Persian Gulf, and saw a horde of giants. They were whale sharks—the world’s largest fish, with a cavernous mouth and a back that looks like a field of stars. They live throughout the tropical oceans and often gather en masse to feed on plankton and fish eggs.
+			</div>
+			<div id="highlight"></div>
+
+			<div id="continue-button">Continue</div>
+		</div>
+
+		<div id="experiment">
+			<div id="text">
+				In 2015, NASA released a document that described how we get from where we are today to boots on Mars. This involves continuing our research on the International Space Station (ISS), then moving humans beyond low-Earth orbit to the proving ground — the region near the moon where we can push the limits of our capabilities in a place where we can safely return astronauts home in a few days. We will continue to robotically explore Mars — as we are currently doing as an international community with numerous spacecraft — from NASA’s Curiosity rover to India’s Mars Orbiter mission. We will use these and future missions to Mars to reduce the risks of landing humans on Mars, from better understanding the structure of Mars’ atmosphere to its potential for providing local resources for future explorers. By the 2030s, we will be ready to move humans toward the Red Planet. Private sector partnerships are critical to enable us as a global society to explore Mars. NASA has been working on this by turning over to the private sector some work that we no longer need to keep as government-only functions, like launching cargo to the ISS, and soon commercial companies will be shuttling humans to the space station. We also are testing new technologies with private companies on the ISS, such as 3D printers that could make space exploration more sustainable. In addition to exploration technology development and demonstrations on the ISS, we also are doing critical research to ensure that we can keep humans healthy for periods of time in space, mitigating health risks such as bone density loss and muscle atrophy. Some might wonder about why sending humans beyond low-Earth orbit to Mars is important, and whether it is worth the cost. Scientifically, Mars is our destination because scientists have determined that Mars is the most likely place to find evidence of life beyond Earth. Water, which is critical to life, was stable on the surface of Mars for around a billion years. Based on what we know about the evolution of life on Earth, life is likely to have arisen on Mars. In that time period, life may not have gotten very complex, so it will likely take astrobiologists and geologists on the surface of Mars to find evidence of ancient microbial life. The evidence of liquid water on the surface of Mars also makes scientists wonder if life could have persisted on Mars, moving underground as conditions became increasingly inhospitable at the surface.
+			</div>
+			<div id="highlight"></div>
+
+			<div id="done-button">Done</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				// running the experiment
+				var duration = 0
+				$('#experiment').hide()
+				$('#continue-button').on('click', function() {
+					$('#warmup').hide()
+					$('#experiment').show()
+					$(window).scrollTop(0)
+					reading_timer = setInterval(function () { ++duration; console.log(duration) }, 1000)
+				})
+				$('#done-button').on('click', function() {
+					$('#warmup').hide()
+					$('#experiment').show()
+					$(window).scrollTop(0)
+					clearInterval(reading_timer)
+					console.log('done', duration)
+					form_url = 'https://docs.google.com/forms/d/e/1FAIpQLSdEyf4opz_sujMwE-WyWMfIN6J3YXzrXE2GIIXC4aV7FPEL7A/viewform?entry.1183639736='
+					window.location.href = form_url + duration;
+				})
+
+				// highlight display method
+				var timer
+				$(window).on('scroll', function() {
+					if (timer) {
+						clearTimeout(timer);
+					}
+					timer = setTimeout(function() {
+						var y = window.scrollY;
+						var offset = (y % 32) * -1;
+						if (offset < 0) {
+							offset = 32 - (offset * -1);
+						}
+						$('#warmup #highlight').css('marginTop', offset)
+						$('#experiment #highlight').css('marginTop', offset)
+					}, 150)
+				})
+			})
+		</script>
+	</body>
+</html>
+
+

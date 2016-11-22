@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta name="mobile-web-app-capable" content="yes">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	</head>
 
@@ -15,6 +16,9 @@
 				padding: 0px 40px;
 				padding-top: 100px;
 				padding-bottom: 350px;
+				color: #CCC;
+			}
+			#text .line[first]{
 				color: #4A4A4A;
 			}
 			#done-button, #continue-button {
@@ -37,15 +41,15 @@
 		</style>
 
 		<div id="warmup">
-			<div id="text">
-				Scientifically, Mars is our destination because scientists have determined that Mars is the most likely place to find evidence of life beyond Earth. Water, which is critical to life, was stable on the surface of Mars for around a billion years. Based on what we know about the evolution of life on Earth, life is likely to have arisen on Mars.
+			<div id="text" data-lining>
+				On the night of September 30, Hayley Ryczek and her husband went out to one of their favorite restaurants, where Ryczek sunk her teeth into a sizzling ribeye steak. When she came to the last bite, she savored it; it would be the last she would eat for a month. On the first day, she went on a six-mile hike, and the next, she prepared a spread of food for a church party.
 			</div>
 
 			<div id="continue-button">Continue</div>
 		</div>
 
 		<div id="experiment">
-			<div id="text">
+			<div id="text" data-lining>
 				There is a lot of talk about the Moon as a colony for mankind, a second home outside of earth. This is the first in a series where we will look at how mankind will need to re-imagine everything when we aspire to a multi-planetary life. The moon presents unique problems that requires us to rethink the way we construct “housing”. The first and the most pressing problem is the lack of atmosphere. This manifests into a multitude of other bigger issues, such as temperature regulation, radiation exposure, and more. Lack of atmosphere first means that humans don’t have anything to breathe. This requires people outside any habitat to wear space suits all the time. Within the habitat, an airtight setting needs to be ensured to make sure there’s breathability. Because there is no atmosphere to regulate the temperature, the days on the moon are searing hot while the nights are painfully freezing. All habitats must be able to keep excess heat out while retaining heat within after sunset. A good way to achieve this, theoretically, could be to have a power source inside habs that heat it, while all the heat is kept out. However, a more practical solution (in all space travel) is to harness the infinite solar energy with effective panels. One of the popular ideas to protect a base is using the lunar soil (“regolith”) itself. Piling mounds and mounds of the regolith on a habitat could effectively insulate it against the sun, leaving few sun window-like structures open to harness the solar energy. A more natural resource available to protect against the heat and the radiation is using the moon’s natural underground lava tubes. Lava tubes are structures that are formed when lava flows below an already solidified layer of previously molten rock, carving out neat, navigate-able tunnels within. Needless to say, the moon had indeed once been volcanically active, creating these tubes of communication underneath. Habitats in artist simulations are always shown as inflatable. This is for a good reason. Considering the current costs of flying stuff out into space, it would be much more expensive to carry things on to the moon and fit them, while the option of collapsing everything and carrying it as a whole exists. The only way for us to build things on the moon directly, it appears, is 3D printing! A 3D printing company in the UK called Monolite showed a simulation of a timelapse of a 3D printed shell being assembled over a habitat. Perhaps in the future, after the first colony is established, we could use the materials found on the moon itself to build new homes there.
 			</div>
 
@@ -53,6 +57,7 @@
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/lining.js/0.3.3/lining.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				// running the experiment
@@ -70,11 +75,27 @@
 					$(window).scrollTop(0)
 					clearInterval(reading_timer)
 					console.log('done', duration)
-					form_url = 'https://docs.google.com/forms/d/e/1FAIpQLSeSZHuPS3RYX-HXCIv6a_-v-xAldJbePokIutjJS0G3TzDGUw/viewform?entry.970383545='
+					form_url = 'https://docs.google.com/forms/d/e/1FAIpQLSc-RujJcP1_vvkTB-jPl6JNqfJuILWA0MAhmFgN2dZlmStdug/viewform?entry.1819428622='
 					window.location.href = form_url + duration;
 				})
+
+				// dim display method
+				var text_cursor = $('.line').first();
+				var last_scroll = 0;
+				$(window).on('scroll', function() {
+					var y = $(window).scrollTop();
+					var line = Math.round(y / 32);
+					if (line == 0){
+						$('#text .line').css('color', "#CCC");
+						$('#text .line[first]').css('color', "#4A4A4A");
+					} else {
+						$('#text .line').css('color', "#CCC");
+						$(`#text .line:nth-of-type(${line})`).css('color', "#4A4A4A");
+					}
+				});
 			})
 		</script>
 	</body>
 </html>
+
 
