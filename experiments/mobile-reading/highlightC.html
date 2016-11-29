@@ -15,10 +15,11 @@
 				padding: 0px 40px;
 				padding-top: 100px;
 				padding-bottom: 440px;
-				color: #4A4A4A;
+				color: #CCC;
 			}
 			#text .line[first]{
 				background-color: #FFF682;
+				color: #4A4A4A;
 			}
 			#done-button, #continue-button {
 				font-family: 'Source Sans Pro', sans-serif;
@@ -88,9 +89,13 @@
 					if (line == 0){
 						$('#text .line').css('background-color', "transparent");
 						$('#text .line[first]').css('background-color', "#FFF682");
+						$('#text .line').css('color', "#CCC");
+						$('#text .line[first]').css('color', "#4A4A4A");
 					} else {
 						$('#text .line').css('background-color', "transparent");
 						$(`#text .line:nth-of-type(${line})`).css('background-color', "#FFF682");
+						$('#text .line').css('color', "#CCC");
+						$(`#text .line:nth-of-type(${line})`).css('color', "#4A4A4A");
 					}
 				});
 			})
