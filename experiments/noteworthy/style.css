@@ -18,37 +18,30 @@ body {
 }
 
 .container {
-	margin: 40px auto;
-	display: inline-block;
-}
-
-.graph-wrapper {
 	width: 94%;
 	max-width: 840px;
 	margin: 40px auto;
 }
-	.graph-wrapper .year {
+	.container .year {
 		font-size: 16px;
 		font-weight: 700;
 		margin-bottom: 10px;
 		text-align: left;
 	}
-	table.graph {
-		display: block;
-		margin-left: -3px;
+	.container .graph {
+		margin: 0;
+		padding: 0;
 	}
-		table.graph tr td {
-			table-layout: fixed;
-			display: inline-block;
+		.container .graph div {
+			float: left;
 			border: 1px solid #DEE6EB;
 			width: 28px;
 			height: 28px;
-			padding: 0;
 			border-radius: 4px;
 			margin: 1px;
 			background-color: #FFF;
 		}
-			table.graph tr td.milestone {
+			.container .graph div.milestone {
 				background-color: #5D65FC;
 				cursor: pointer;
 			}
