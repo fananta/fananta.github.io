@@ -38,6 +38,7 @@ body {
 		margin-left: -3px;
 	}
 		table.graph tr td {
+			table-layout: fixed;
 			display: inline-block;
 			border: 1px solid #DEE6EB;
 			width: 28px;
