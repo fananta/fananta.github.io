@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:500,700');
+
+* {
+	font-family: 'Dosis', sans-serif;
+	outline: none;
+	color: #4A4A4A;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: inherit;
+}
+
+body {
+	background-color: #F5F8FA;
+	text-align: center;
+}
+
+.container {
+	margin: 40px auto;
+	display: inline-block;
+}
+
+.graph-wrapper {
+	width: 94%;
+	max-width: 840px;
+	margin: 40px auto;
+}
+	.graph-wrapper .year {
+		font-size: 16px;
+		font-weight: 700;
+		margin-bottom: 10px;
+		text-align: left;
+	}
+	table.graph {
+		display: block;
+		margin-left: -3px;
+	}
+		table.graph tr td {
+			display: inline-block;
+			border: 1px solid #DEE6EB;
+			width: 28px;
+			height: 28px;
+			padding: 0;
+			border-radius: 4px;
+			margin: 1px;
+			background-color: #FFF;
+		}
+			table.graph tr td.milestone {
+				background-color: #5D65FC;
+				cursor: pointer;
+			}
+
+
