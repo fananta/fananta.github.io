@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-	width: 100%;
+	/*width: 100%;*/
 }
 	.container .statusbar {
 		height: 20px;
