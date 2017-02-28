@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-	width: 94%;
+	width: 90%;
 	max-width: 840px;
 	margin: 40px auto;
 }
@@ -45,5 +45,8 @@ body {
 				background-color: #5D65FC;
 				cursor: pointer;
 			}
+				.container .graph div.milestone.special {
+					background-color: #00D084;
+				}
 
 
