@@ -1,5 +1,5 @@
 <title>Roach Capital</title>
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
 	<!-- FAVICON -->
@@ -9,38 +9,63 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 	<style type="text/css">
+		html {
+			background: url(bg.png) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+
+			border-top: 2px solid;
+			border-image: linear-gradient(to left, #C73E80, #FE634D, #FC848D, #FC848D, #4E47E2, #4E47E2);
+			border-image-slice: 1;
+		}
+
 		body {
 			font-family: 'Roboto Mono', monospace;
-			font-size: 14px;
-			color: #4C5567;
-			margin: 100px 10%;
+			font-size: 12px;
+			margin: 150px 20%;
+			color: #1B202B;
 		}
-		.page-title {
-			font-size: 22px;
-			font-weight: 500;
-			color: #222;
+		.logo img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 120px;
 		}
-		.intro-section {
-			line-height: 28px;
-			margin-top: 40px;
-		}
-		.list-section {
-			line-height: 28px;
-			margin-top: 40px;
-		}
-		.section-title {
-			font-weight: 500;
-			text-transform: uppercase;
-			color: #222;
 
+		.title {
+			font-size: 32px;
+			text-transform: uppercase;
+			letter-spacing: 6px;
+			color: #1B202B;
+		}
+			.title .fade {
+				background-image: linear-gradient(to right, #1B202B, rgba(116, 128, 148, .4), rgba(116, 128, 148, .2));
+				color: transparent;
+				-webkit-background-clip: text;
+				background-clip: text;
+			}
+		.subtitle {
+			margin-top: 10px;
+			line-height: 24px;
+			text-transform: uppercase;
+			color: rgba(116, 128, 148, .4);
+			letter-spacing: 3px;
+		}
+
+
+		.list-section {
+			margin-top: 100px;
+			line-height: 34px;
+			text-transform: uppercase;
+			color: rgba(116, 128, 148, .8);
+			letter-spacing: 3px;
 		}
 		ul {
 			list-style: none;
 			padding: 0;
 			margin: 0;
-		}
-		.gray {
-			color: rgba(130,148,168,0.4);
 		}
 
 		a {
@@ -52,46 +77,28 @@
 		a:hover {
 			color: #4E47E2;
 		}
-		.sticky-link {
-			color: #4E47E2;
-		}
 	</style>
 </head>
 
 <body>
-	<div class="page-title">Roach Capital</div>
+	<div class="logo">
+		<img src="logo.png">
+	</div>
 
-	<div class="intro-section">
-		Roach Capital is an investment fund. It's run by me, <span class="sticky-link"><a href="https://twitter.com/fahdananta">Fahd Ananta</a></span>.
-		<br>
-		I invest in companies that will shape our future and people that are roaches.
-		<br><br>
-		(Sometimes I also build products under this portfolio.)
+	<div class="title">Roach <span class="faded">Capital</span></div>
+	<div class="subtitle">
+		STUDIO AND EARLY STAGE FUND<br>
+		<a href="https://twitter.com/roachcap">@ROACHCAP</a>
 	</div>
 
 	<div class="list-section">
-		<div class="section-title">Investments</div>
 		<ul>
-			<li><a href="https://www.ada.support/" target="_blank">Ada</a></li>
-			<li><a href="https://www.convictional.com/" target="_blank">Convictional</a></li>
-			<li><a href="https://kabo.co/" target="_blank">Kabo</a></li>
-			<li><a href="https://www.hellolilia.com/" target="_blank">Lilia</a></li>
-			<li class="gray">M*</li>
-			<li><a href="https://mayday.am/" target="_blank">Mayday</a></li>
-			<li><a href="https://www.playmultiverse.com/" target="_blank">Multiverse</a></li>
-			<li><a href="https://www.useparagon.com/" target="_blank">Paragon</a></li>
-			<li class="gray">Q*</li>
-			<li><a href="https://relayfi.com/" target="_blank">Relay</a></li>
-			<li class="gray">T*</li>
-		</ul>
-	</div>
-
-	<div class="list-section">
-		<div class="section-title">Products</div>
-		<ul>
-			<li class="gray">ProductMap — private sale</li>
-			<li class="gray"><a href="https://betakit.com/tab-acquired-velocity-hospitality-mobile-payment-platform/" target="_blank">Tab Payments — acquired by Velocity</a></li>
-			<li class="gray"><a href="https://techcrunch.com/2013/03/28/hubspot-acquires-chime-prepwork/" target="_blank">Chime — acquired by HubSpot</a></li>
+			<!-- <li>MERCH</li>
+			<li>YOUTUBE: MORE ADVENTURES, MORE LIFE</li>
+			<li>THE STUDIO</li> -->
+			<!-- <li><a href="">ROACH CAPITAL SEED FUND</a></li> -->
+			<li><a href="https://www.notion.so/fahdananta/Investments-392e73fc37064c48bab9fd542a8d0d23">INVESTMENTS</a></li>
+			<!-- <li><a href="">ANGEL INVESTORS IN CANADA</a></li> -->
 		</ul>
 	</div>
 </body>
