@@ -53,7 +53,7 @@
 
 
 		.list-section {
-			margin-top: 60px;
+			margin-top: 50px;
 			color: #748094;
 			letter-spacing: 2px;
 		}
@@ -63,7 +63,7 @@
 			margin: 0;
 		}
 		li {
-			margin-top: 24px;
+			margin-top: 22px;
 		}
 
 		a {
@@ -77,36 +77,39 @@
 		}
 
 		.text-section {
-			margin-top: 60px;
-			color: #748094;
+			margin-top: 50px;
 			letter-spacing: 2px;
-			line-height: 32px;
 			max-width: 750px;
-			color: #1B202B;
-			font-size: 16px;
 		}
 		.text-section .bullet {
-			margin-top: 20px;
-			border-left: 2px solid black;
+			border-left: 2px solid;
 			padding-left: 20px;
 		}
-			.text-section .bullet a {
+			.text-section .bullet.primary {
+				font-size: 22px;
+				line-height: 36px;
+				border-color: #4E47E2;
+				color: #1B202B;
+			}
+			.text-section .bullet.secondary {
+				/* font-size: 16px; */
+				border-color: #748094;
 				color: #748094;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				margin-top: 30px;
+				font-weight: 300;
+				line-height: 28px;
+			}
+			.text-section .bullet.secondary.pink-border {
+				border-color: #C73E80;
+				color: #1B202B;
+			}
+			.text-section .bullet a {
+				font-weight: 400;
 			}
 			.text-section .bullet a:hover {
 				color: #4E47E2;
-			}
-			.text-section .bullet.borderA {
-				border-color: #4E47E2;
-			}
-			.text-section .bullet.borderB {
-				border-color: #C73E80;
-			}
-			.text-section .bullet.borderC {
-				border-color: #FE634D;
-			}
-			.text-section .bullet.borderD {
-				border-color: #FC848D;
 			}
 	</style>
 </head>
@@ -124,14 +127,15 @@
 	<div class="list-section">
 		<ul>
 			<li><a href="https://www.notion.so/fahdananta/Investments-392e73fc37064c48bab9fd542a8d0d23" target="_parent">Investments</a></li>
-			<li style="opacity: 20%;">Roach Merch Shop</li>
+			<li style="opacity: 30%;">Roach Merch</li>
 		</ul>
 	</div>
 
 	<div class="text-section">
-		<div class="bullet borderA">Roach Capital is an investment firm focused on early stage internet companies.</div>
-		<div class="bullet borderB">We invest on independent conviction in companies that have an unfair right to win and resilient (“Roach”) founders.</div>
-		<div class="bullet borderC">Investments are $50-250K. We can help with product strategy, recruiting, and intros to strategic partners.</div>
-		<div class="bullet borderD">Learn more <a href="https://www.notion.so/fahdananta/Fahd-Ananta-7442abe5ada345559352c7228683696b" target="_parent">here</a>, <a href="https://twitter.com/fahdananta">here</a>, or email <a href="mailto:f.ananta@gmail.com">f.ananta@gmail.com</a>.</div>
+		<div class="bullet primary">Roach Capital is an investment firm focused on early stage internet companies.</div>
+		<div class="bullet secondary pink-border">
+			We invest on independent conviction in companies that have an unfair right to win and resilient (“Roach”) founders. Investments are $100-250K.
+		</div>
+		<div class="bullet secondary">Learn more <a href="https://www.notion.so/fahdananta/Fahd-Ananta-7442abe5ada345559352c7228683696b" target="_parent">here</a>, <a href="https://twitter.com/fahdananta">here</a>, or reach out at <a href="mailto:f.ananta@gmail.com">f.ananta@gmail.com</a>.</div>
 	</div>
 </body>
