@@ -10,138 +10,138 @@
 	<!-- FONT -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Niramit:wght@400;500&family=Homemade+Apple&display=swap" rel="stylesheet">
 
 	<style type="text/css">
 		html {
-			background: url(bg.png) repeat center center fixed;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
+			background: #FBFBFD;
 
-			border-style: solid;
+			/* border-style: solid;
 			border-width: 2px 0 0 0;
 			border-image: linear-gradient(to left, #C73E80, #FE634D, #FC848D, #FC848D, #4E47E2, #4E47E2);
-			border-image-slice: 1;
+			border-image-slice: 1; */
 
 			scroll-behavior: smooth;
 		}
 
 		body {
-			font-family: 'Dosis', sans-serif;
+			font-family: 'Niramit', sans-serif;
 			font-size: 18px;
-			margin: 150px 20%;
-			color: #1B202B;
-		}
-		.logo img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 120px;
+			margin: 50px 410px;
+			color: #000;
 		}
 
-		.title {
-			font-size: 32px;
-			font-weight: 500;
-			letter-spacing: 4px;
-			color: #1B202B;
+		.header {
+			display: flex;
+			align-items: center;
+			margin-left: -36px;
 		}
-		.subtitle {
-			margin-top: 10px;
-			color: #CED2DB;
-			letter-spacing: 2px;
-		}
-
-
-		.list-section {
-			margin-top: 50px;
-			color: #748094;
-			letter-spacing: 2px;
-			font-weight: 500;
-		}
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-		li {
-			margin-top: 22px;
-		}
-
-		a {
-			text-decoration: none;
-		}
-		a:link, a:visited, a:active {
-			color: inherit;
-		}
-		a:hover {
-			color: #4E47E2;
-		}
-
-		.text-section {
-			margin-top: 50px;
-			letter-spacing: 2px;
-			max-width: 750px;
-		}
-		.text-section .bullet {
-			border-left: 2px solid;
-			padding-left: 20px;
-		}
-			.text-section .bullet.primary {
-				font-size: 22px;
-				line-height: 36px;
-				border-color: #4E47E2;
-				color: #1B202B;
+			.logo-wrapper img {
+				width: 100px;
 			}
-			.text-section .bullet.secondary {
-				border-color: #748094;
-				color: #748094;
-				padding-top: 5px;
-				padding-bottom: 5px;
-				margin-top: 30px;
-				font-weight: 300;
-				line-height: 28px;
-			}
-			.text-section .bullet.secondary.pink-border {
-				border-color: #C73E80;
-				color: #1B202B;
-			}
-			.text-section .bullet a {
+			.fund-name {
+				font-size: 32px;
 				font-weight: 500;
+				letter-spacing: 1px;
+
+				margin-left: -15px;
+				padding-bottom: 10px;
 			}
-			.text-section .bullet a:hover {
-				color: #4E47E2;
+
+		.nav-menu {
+			margin-top: 2px;
+			font-size: 14px;
+			font-weight: 500;
+			letter-spacing: .7px;
+			color: #748094;
+		}
+			.nav-menu span {
+				margin-right: 40px;
+				line-height: 30px;
+			}
+			.nav-menu span.active {
+				color: #000;
+			}
+
+		a { text-decoration: none; }
+		a:link, a:visited, a:active { color: inherit; }
+		/* a:hover { color: #000; } */
+
+		.core-heading {
+			margin-top: 100px;
+			font-size: 26px;
+			line-height: 40px;
+			letter-spacing: 1px;
+		}
+		.core-paragraph {
+			margin-top: 30px;
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+		.footer {
+			margin-top: 100px;
+			font-family: 'DM Mono', monospace;
+			font-size: 14px;
+			color: #748094;
+		}
+			.footer .footer-signature {
+				font-family: 'Homemade Apple', cursive;
+				font-size: 18px;
+				letter-spacing: 1.8px;
+				color: #000;
+			}
+			.footer .footer-twitter {
+				margin-top: 10px;
+			}
+			.footer .footer-email {
+				margin-top: 10px;
 			}
 
 			.fund-container {
-				margin-top: 200px;
+				margin-top: 140px;
+				/* margin-top: 200px; */
+				/* background: red; */
 			}
-				.fund-container .fund-name {
-					font-size: 22px;
-					font-weight: 500;
-					letter-spacing: 2px;
-					margin-bottom: 50px;
-				}
 				.fund-container .company-card {
 					display: inline-block;
-					margin-right: 20px;
-					margin-bottom: 20px;
+					/* margin-right: 20px; */
+					margin-bottom: 14px;
 
-					width: 200px;
-					height: 100px;
+					min-width: 230px;
+					width: calc((100% - 100px)/2);
+					height: 126px;
 					padding: 20px;
-					border-radius: 2px;
-					font-weight: 600;
-					letter-spacing: 4px;
-					font-size: 14px;
+					border-radius: 4px;
+					font-size: 10px;
 
-					background: #1B202B;
+					background: #000000;
 					color: #FBFBFD;
+
+					font-family: 'DM Mono', monospace;
 				}
+				/* When the browser is at least 600px and above */
+				@media screen and (max-width: 1378px) {
+				  .fund-container .company-card {
+				   width: calc(100% - 40px);
+				  }
+					body {
+						margin: 40px 40px;
+					}
+				}
+			.fund-container .company-card.left {
+				/* margin-left: 14px; */
+				margin-right: 14px;
+			}
 					.fund-container .company-card .company-name {
-						margin-top: 10px;
+						margin-top: 40px;
 						text-transform: uppercase;
+						/* font-weight: 500; */
+						letter-spacing: 2px;
+					}
+					.fund-container .company-card .company-description {
+						margin-top: 8px;
+						line-height: 14px;
 					}
 					.fund-container .company-card.dead {
 						 background: #f0f2f8;
@@ -163,199 +163,63 @@
 </head>
 
 <body>
-	<div class="logo">
-		<img src="logo.png">
-	</div>
 
-	<div class="title">Roach Capital</div>
-	<div class="subtitle">
-		<a href="https://twitter.com/roachcap">@RoachCap</a>
-	</div>
-
-	<div class="list-section">
-		<ul>
-			<li><a href="#investments">Investments</a></li>
-			<li style="opacity: 25%;">Roach Merch</li>
-		</ul>
-	</div>
-
-	<div class="text-section">
-		<div class="bullet primary">Roach Capital is an investment firm focused on early stage internet companies</div>
-		<div class="bullet secondary pink-border">
-			We invest with independent conviction in companies that have an unfair advantage and resilient founders.
+	<div class="header">
+		<div class="logo-wrapper">
+			<img src="logothick.png">
 		</div>
-		<div class="bullet secondary">Learn more <a href="https://www.notion.so/fahdananta/Fahd-Ananta-7442abe5ada345559352c7228683696b" target="_parent">here</a>, <a href="https://twitter.com/fahdananta">here</a>, or reach out at <a href="mailto:fahd@roachcap.com">fahd@roachcap.com</a>.</div>
+		<div class="fund-name">Roach Capital</div>
+	</div>
+
+	<div class="nav-menu">
+		<span class="active"><a href="">About</a></span>
+		<span><a href="#investments">Investments</a></span>
+		<span style="opacity: 50%;">Team</span>
+		<span style="opacity: 50%;">Merch</span>
+	</div>
+
+	<div class="core-heading">Roach Capital is an investment firm focused on early stage internet companies.</div>
+	<div class="core-paragraph">
+		We invest with independent conviction in companies that have an unfair advantage and resilient founders.
+	</div>
+
+	<div class="footer">
+		<div class="footer-signature">Fahd Ananta</div>
+		<div class="footer-twitter"><a href="https://twitter.com/roachcap" target="_blank">@roachcap</a></div>
+		<div class="footer-email">fahd@roachcap.com</div>
 	</div>
 
 	<div class="fund-container" id="investments">
-		<div class="fund-name">Fund 0</div>
+		<iframe class="airtable-embed" src="https://airtable.com/embed/shrdEbaZtwDZ1fBb5?backgroundColor=purple&layout=card" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
-		<a href="https://relayfi.com" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>001</span>
+		<!-- <a href="https://relayfi.com" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<img src="logo-relay.png" style="height: 12px;">
 				<div class="company-name">Relay</div>
+				<div class="company-description">Bank for SMBs</div>
 			</div>
 		</a>
 		<a href="https://ada.cx" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>002</span>
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<img src="logo-ada.png" style="height: 12px;">
 				<div class="company-name">Ada</div>
+				<div class="company-description">AI automation for customer support</div>
 			</div>
 		</a>
 		<a href="https://convictional.com" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>003</span>
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<img src="logo-convictional.png" style="height: 12px;">
 				<div class="company-name">Convictional</div>
+				<div class="company-description">Supplier enablement platform</div>
 			</div>
 		</a>
-		<a href="https://www.hellolilia.com/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>004</span>
-				<div class="company-name">Lilia</div>
+		<a href="https://convictional.com" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<img src="logo-convictional.png" style="height: 12px;">
+				<div class="company-name">Convictional</div>
+				<div class="company-description">Supplier enablement platform</div>
 			</div>
-		</a>
-		<a href="https://www.useparagon.com/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>005</span>
-				<div class="company-name">Paragon</div>
-			</div>
-		</a>
-		<a href="https://mayday.am/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>006</span>
-				<div class="company-name">Mayday</div>
-			</div>
-		</a>
-		<a href="https://www.metaplane.dev/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>007</span>
-				<div class="company-name">Metaplane</div>
-			</div>
-		</a>
-		<a href="https://kabo.co/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>008</span>
-				<div class="company-name">Kabo</div>
-			</div>
-		</a>
-		<a href="https://multiverse.com/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>009</span>
-				<div class="company-name">Multiverse</div>
-			</div>
-		</a>
-		<a href="https://www.maximustribe.com/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>010</span>
-				<div class="company-name">Maximus</div>
-			</div>
-		</a>
-		<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card dead">
-			<span>011</span>
-			<div class="company-name">Thinko</div>
-		</div>
-		<a href="https://tryindex.com/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>012</span>
-				<div class="company-name">Index</div>
-			</div>
-		</a>
-		<a href="https://italic.com/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>013</span>
-				<div class="company-name">Italic</div>
-			</div>
-		</a>
-		<a href="https://www.legalmate.co/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>014</span>
-				<div class="company-name">Legalmate</div>
-			</div>
-		</a>
-		<a href="https://www.usemacro.com/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>015</span>
-				<div class="company-name">Macro</div>
-			</div>
-		</a>
-		<a href="https://www.atai.life/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card" style="background-image: linear-gradient(to top left, #aefb2a, #57ebde); color: #fff;">
-				<span>016 (IPO)</span>
-				<div class="company-name">Atai</div>
-			</div>
-		</a>
-		<a href="https://getparker.com/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>017</span>
-				<div class="company-name">Parker</div>
-			</div>
-		</a>
-		<a href="https://www.railz.ai/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>018</span>
-				<div class="company-name">Railz</div>
-			</div>
-		</a>
-		<a href="https://modelliving.com/" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>019</span>
-				<div class="company-name">Model Living</div>
-			</div>
-		</a>
-		<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card dead">
-			<span>020</span>
-			<div class="company-name">Jupiter</div>
-		</div>
-		<a href="https://faci.ly" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>021</span>
-				<div class="company-name">Facily</div>
-			</div>
-		</a>
-		<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-			<span>022</span>
-			<div class="company-name">Stealth  📣</div>
-		</div>
-		<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-			<span>023</span>
-			<div class="company-name">Stealth 🌈</div>
-		</div>
-		<a href="https://convertkit.com" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-				<span>024</span>
-				<div class="company-name">ConvertKit</div>
-			</div>
-		</a>
-	</div>
-
-	<div class="fund-container">
-		<div class="fund-name">Fund I</div>
-
-		<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-			<span>001</span>
-			<div class="company-name">Stealth 🚘</div>
-		</div>
-		<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-			<span>002</span>
-			<div class="company-name">Stealth 👖</div>
-		</div>
-		<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-			<span>003</span>
-			<div class="company-name">Stealth 💻</div>
-		</div>
-		<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-			<span>004</span>
-			<div class="company-name">Stealth 📈</div>
-		</div>
-		<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-			<span>005</span>
-			<div class="company-name">Stealth 📦</div>
-		</div>
-		<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card">
-			<span>006</span>
-			<div class="company-name">Stealth 🥼</div>
-		</div>
-
+		</a> -->
 	</div>
 
 	<!-- CARD TILT ANIMATION -->
