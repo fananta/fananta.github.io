@@ -100,18 +100,22 @@
 
 			.fund-container {
 				margin-top: 140px;
-				/* margin-top: 200px; */
-				/* background: red; */
 			}
+				.fund-container .fund-series {
+					margin-bottom: 20px;
+					font-size: 18px;
+					line-height: 40px;
+					letter-spacing: 1px;
+					font-weight: 500;
+				}
 				.fund-container .company-card {
 					display: inline-block;
-					/* margin-right: 20px; */
 					margin-bottom: 14px;
 
 					min-width: 230px;
 					width: calc((100% - 100px)/2);
-					height: 126px;
-					padding: 20px;
+					/* height: 126px; */
+					padding: 24px 20px;
 					border-radius: 4px;
 					font-size: 10px;
 
@@ -130,23 +134,24 @@
 					}
 				}
 			.fund-container .company-card.left {
-				/* margin-left: 14px; */
 				margin-right: 14px;
 			}
 					.fund-container .company-card .company-name {
-						margin-top: 40px;
+						margin-top: 30px;
 						text-transform: uppercase;
-						/* font-weight: 500; */
+						font-weight: 500;
 						letter-spacing: 2px;
 					}
 					.fund-container .company-card .company-description {
 						margin-top: 8px;
 						line-height: 14px;
+						font-size: 10.5px;
 					}
 					.fund-container .company-card.dead {
 						 background: #f0f2f8;
-						 color: #1B202B;
-						 opacity: 0.75;
+						 /* color: #1B202B; */
+						 color: #828C96;
+						 opacity: 0.8;
 					}
 						.fund-container .company-card.dead .company-name {
 							text-decoration: line-through;
@@ -155,6 +160,12 @@
 					color: inherit;
 					cursor: default;
 				}
+					/* .fund-container a:hover > .company-card .company-description {
+						color: #FFF;
+					}
+					.fund-container a:hover > .company-card.dead .company-description {
+						color: #828C96;
+					} */
 				.fund-container .company-card:not(.dead):hover {
 					background-image: linear-gradient(to top left, #C73E80, #4E47E2);
 					background-image: linear-gradient(to top left, #B34ECC, #F5895C);
@@ -174,13 +185,12 @@
 	<div class="nav-menu">
 		<span class="active"><a href="">About</a></span>
 		<span><a href="#investments">Investments</a></span>
-		<span style="opacity: 50%;">Team</span>
-		<span style="opacity: 50%;">Merch</span>
+		<span><a href="https://twitter.com/fahdananta" target="_blank">Team</a></span>
 	</div>
 
 	<div class="core-heading">Roach Capital is an investment firm focused on early stage internet companies.</div>
 	<div class="core-paragraph">
-		We invest $50-200K with independent conviction in companies that have an unfair advantage and cockroach founders.
+		We invest with independent conviction in companies that have an unfair advantage and resilient founders.
 	</div>
 
 	<div class="footer">
@@ -190,13 +200,14 @@
 	</div>
 
 	<div class="fund-container" id="investments">
-		<iframe class="airtable-embed" src="https://airtable.com/embed/shreUW4miPfVmOkL3?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+		<div class="fund-series">Fund I</div>
+		<!-- <iframe class="airtable-embed" src="https://airtable.com/embed/shreUW4miPfVmOkL3?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe> -->
 
-		<!-- <a href="https://relayfi.com" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
-				<img src="logo-relay.png" style="height: 12px;">
-				<div class="company-name">Relay</div>
-				<div class="company-description">Bank for SMBs</div>
+		<a href="https://relayfi.com" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left dead">
+				<img src="logo-jupiter.png" style="height: 12px;">
+				<div class="company-name">Jupiter</div>
+				<div class="company-description">Platform for beauty pros</div>
 			</div>
 		</a>
 		<a href="https://ada.cx" target="_blank">
@@ -219,7 +230,7 @@
 				<div class="company-name">Convictional</div>
 				<div class="company-description">Supplier enablement platform</div>
 			</div>
-		</a> -->
+		</a>
 	</div>
 
 	<!-- CARD TILT ANIMATION -->
