@@ -24,6 +24,15 @@
 			scroll-behavior: smooth;
 		}
 
+		::selection {
+			/* background: rgba(199, 62, 128, 0.3); */
+			background: rgba(245, 137, 92, 0.3);
+			/* background: rgba(254, 99, 77, 0.2); */
+		}
+		::-moz-selection {
+			background: #ffb7b7;
+		}
+
 		body {
 			font-family: 'Niramit', sans-serif;
 			font-size: 18px;
@@ -114,7 +123,6 @@
 
 					min-width: 230px;
 					width: calc((100% - 100px)/2);
-					/* height: 126px; */
 					padding: 24px 20px;
 					border-radius: 4px;
 					font-size: 10px;
@@ -137,7 +145,6 @@
 				margin-right: 14px;
 			}
 					.fund-container .company-card .company-name {
-						margin-top: 30px;
 						text-transform: uppercase;
 						font-weight: 500;
 						letter-spacing: 2px;
@@ -146,11 +153,11 @@
 						margin-top: 8px;
 						line-height: 14px;
 						font-size: 10.5px;
+						opacity: 0.7;
 					}
 					.fund-container .company-card.dead {
 						 background: #f0f2f8;
 						 color: #828C96;
-						 opacity: 0.8;
 					}
 						.fund-container .company-card.dead .company-name {
 							text-decoration: line-through;
@@ -170,7 +177,7 @@
 
 	<div class="header">
 		<div class="logo-wrapper">
-			<img src="logothick.png">
+			<img src="roach-logo.png">
 		</div>
 		<div class="fund-name">Roach Capital</div>
 	</div>
@@ -194,77 +201,248 @@
 
 	<div class="fund-container" id="investments">
 		<div class="fund-series">Fund I</div>
-		<iframe class="airtable-embed" src="https://airtable.com/embed/shreUW4miPfVmOkL3?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+		<!-- <iframe class="airtable-embed" src="https://airtable.com/embed/shreUW4miPfVmOkL3?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe> -->
 
-		<!-- <a href="https://vinnauto.com/" target="_blank">
+		<a href="https://vinnauto.com/" target="_blank">
 			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
-				<img src="logo-jupiter.png" style="height: 12px;">
 				<div class="company-name">VINN Auto</div>
 				<div class="company-description">Online car marketplace</div>
 			</div>
 		</a>
 		<a href="https://www.calicoai.com/" target="_blank">
 			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
-				<img src="logo-ada.png" style="height: 12px;">
 				<div class="company-name">Calico</div>
 				<div class="company-description">Supply chain management for brands</div>
 			</div>
 		</a>
 		<a href="https://replit.com/" target="_blank">
 			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
-				<img src="logo-convictional.png" style="height: 12px;">
 				<div class="company-name">Replit</div>
 				<div class="company-description">Collaborative coding platform</div>
 			</div>
 		</a>
 		<a href="https://www.upscribe.io/" target="_blank">
 			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
-				<img src="logo-convictional.png" style="height: 12px;">
 				<div class="company-name">Upscribe</div>
 				<div class="company-description">Subscription management for merchants</div>
 			</div>
 		</a>
 		<a href="https://drop.party/" target="_blank">
 			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
-				<img src="logo-convictional.png" style="height: 12px;">
 				<div class="company-name">Drop Party</div>
 				<div class="company-description">Luxury merch drops for creators</div>
 			</div>
 		</a>
 		<a href="https://www.nexhealth.com/" target="_blank">
 			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
-				<img src="logo-convictional.png" style="height: 12px;">
 				<div class="company-name">NexHealth</div>
 				<div class="company-description">Practice management system for clinics</div>
 			</div>
-		</a> -->
+		</a>
+		<a href="https://usecodex.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Codex</div>
+				<div class="company-description">Code annotations in the IDE</div>
+			</div>
+		</a>
+		<a href="https://www.levels.fyi/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Levels.fyi</div>
+				<div class="company-description">Compensation data for tech employees</div>
+			</div>
+		</a>
+		<a href="https://www.dwelling.co/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Dwelling</div>
+				<div class="company-description">Tech-enabled real estate brokerage</div>
+			</div>
+		</a>
+		<a href="https://floatcard.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Float</div>
+				<div class="company-description">Business expense cards in Canada</div>
+			</div>
+		</a>
+		<a href="https://www.myco.space/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Myco</div>
+				<div class="company-description">Platform for managing DAOs</div>
+			</div>
+		</a>
+		<a href="https://www.documatic.io/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Documatic</div>
+				<div class="company-description">Automatic API documentation</div>
+			</div>
+		</a>
+		<a href="https://thebasestation.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Basestation</div>
+				<div class="company-description">Platform for waste management SMBs</div>
+			</div>
+		</a>
+		<a href="https://thirdweb.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">thirdweb</div>
+				<div class="company-description">No code tool for web3 apps</div>
+			</div>
+		</a>
+		<a href="https://parallel.life/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Parallel</div>
+				<div class="company-description">Sci-fi NFT card game franchise</div>
+			</div>
+		</a>
 	</div>
 
-	<!-- <div class="fund-container" id="investments">
+	<div class="fund-container" id="investments">
 		<div class="fund-series">Fund 0</div>
 
-		<a href="https://ada.cx" target="_blank">
+		<a href="https://relayfi.com/" target="_blank">
 			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
-				<img src="logo-ada.png" style="height: 12px;">
+				<div class="company-name">Relay</div>
+				<div class="company-description">Online bank for SMBs</div>
+			</div>
+		</a>
+		<a href="https://ada.cx" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
 				<div class="company-name">Ada</div>
-				<div class="company-description">AI automation for customer support</div>
+				<div class="company-description">AI chatbot for customer support</div>
 			</div>
 		</a>
 		<a href="https://convictional.com" target="_blank">
-			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
-				<img src="logo-convictional.png" style="height: 12px;">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
 				<div class="company-name">Convictional</div>
 				<div class="company-description">Supplier enablement platform</div>
 			</div>
 		</a>
-		<a href="https://relayfi.com" target="_blank">
+		<a href="https://www.hellolilia.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Lilia</div>
+				<div class="company-description">Egg freezing concierge</div>
+			</div>
+		</a>
+		<a href="https://mayday.am/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Mayday</div>
+				<div class="company-description">Intelligent calendar assistant</div>
+			</div>
+		</a>
+		<a href="https://www.useparagon.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Paragon</div>
+				<div class="company-description">Low-code tool for product integrations</div>
+			</div>
+		</a>
+		<a href="https://www.metaplane.dev/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Metaplane</div>
+				<div class="company-description">Error tracking for data pipelines</div>
+			</div>
+		</a>
+		<a href="https://kabo.co/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Kabo</div>
+				<div class="company-description">Fresh pet food subscriptions</div>
+			</div>
+		</a>
+		<a href="https://multiverse.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Multiverse</div>
+				<div class="company-description">Online video game platform</div>
+			</div>
+		</a>
+		<a href="https://www.maximustribe.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Maximus Health</div>
+				<div class="company-description">Home test kits and medication for TRT</div>
+			</div>
+		</a>
+		<a href="" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left dead">
+				<div class="company-name">Thinko</div>
+				<div class="company-description">Internet animation studio</div>
+			</div>
+		</a>
+		<a href="https://index.app/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Index</div>
+				<div class="company-description">No-code data dashboards</div>
+			</div>
+		</a>
+		<a href="https://italic.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Italic</div>
+				<div class="company-description">Luxury consumer goods marketplace</div>
+			</div>
+		</a>
+		<a href="https://www.legalmate.co/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">LegalMate</div>
+				<div class="company-description">Financing for law firm clients</div>
+			</div>
+		</a>
+		<a href="https://getparker.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Parker</div>
+				<div class="company-description">Financial platform for D2C merchants</div>
+			</div>
+		</a>
+		<a href="https://railz.ai/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Railz</div>
+				<div class="company-description">API for accounting data</div>
+			</div>
+		</a>
+		<a href="https://www.modelliving.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Model Living</div>
+				<div class="company-description">Prefab home renovations</div>
+			</div>
+		</a>
+		<a href="" target="_blank">
 			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right dead">
-				<img src="logo-jupiter.png" style="height: 12px;">
 				<div class="company-name">Jupiter</div>
 				<div class="company-description">Platform for beauty pros</div>
 			</div>
 		</a>
-	</div> -->
+		<a href="https://rainbow.me/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Rainbow</div>
+				<div class="company-description">Simple Ethereum wallet</div>
+			</div>
+		</a>
+		<a href="" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Stealth</div>
+				<div class="company-description">Employee collaboration tool</div>
+			</div>
+		</a>
+		<a href="https://convertkit.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">ConvertKit</div>
+				<div class="company-description">Creator marketing platform</div>
+			</div>
+		</a>
+		<a href="https://www.burrata.xyz/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Burrata</div>
+				<div class="company-description">KYC for web3</div>
+			</div>
+		</a>
+		<a href="https://www.opslevel.com/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card left">
+				<div class="company-name">Opslevel</div>
+				<div class="company-description">Central hub for all microservices</div>
+			</div>
+		</a>
+		<a href="https://railway.app/" target="_blank">
+			<div data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.5 class="company-card right">
+				<div class="company-name">Railway</div>
+				<div class="company-description">Provision, build, and deploy apps</div>
+			</div>
+		</a>
+	</div>
 
 	<!-- CARD TILT ANIMATION -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
