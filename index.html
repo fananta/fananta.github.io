@@ -38,7 +38,9 @@
 		body {
 			font-family: 'Manrope', sans-serif;
 			font-size: 14px;
-			margin: 0px 350px;
+/*			margin: 0px 350px;*/
+			width: 53%;
+			margin: auto;
 			color: #171717;
 		}
 
@@ -187,9 +189,10 @@
 				flex-direction: row;
 				flex-wrap: wrap;
 				justify-content: flex-start;
-				gap: 20px;
+				gap: 10px;
 			}
 				.portfolio-section .company-section-wrapper .company-card {
+					flex-shrink: 0;
 					width: 380px;
 					border-radius: 8px;
 					background: #F9F9F9;
@@ -281,10 +284,24 @@
 			color: #B0B0B0;
 		}
 
-		/* When the browser is at least 600px and above */
-		@media screen and (max-width: 1378px) {
+		@media only screen and (max-width: 1500px) {
 			body {
-				margin: 40px 40px;
+				width: 55%;
+			}
+		}
+		@media only screen and (max-width: 1400px) {
+			body {
+				width: 65%;
+			}
+		}
+		@media only screen and (max-width: 1200px) {
+			body {
+				width: 80%;
+			}
+		}
+		@media only screen and (max-width: 980px) {
+			body {
+				width: 80%;
 			}
 		}
 	</style>
@@ -324,23 +341,23 @@
 		</div>
 		</a>
 
-		<!-- <div class="nav-item">
+		<div class="nav-item">
 			<div class="icon"><img src="icons/icon-lps.png"></div>
 			<div class="text-wrapper">
 				<div class="title">For LPs <div class="aux-icon"><img src="icons/icon-lock.png"></div></div>
 				<div class="subtitle">Fund updates & performance</div>
 			</div>
-		</div> -->
+		</div>
 
-		<!-- <div class="nav-item">
+		<div class="nav-item">
 			<div class="icon"><img src="icons/icon-memo.png"></div>
 			<div class="text-wrapper">
 				<div class="title">Memos</div>
 				<div class="subtitle">Memos and deep dives</div>
 			</div>
-		</div> -->
+		</div>
 
-		<!-- <div class="nav-item extra-top-margin">
+		<div class="nav-item extra-top-margin">
 			<div class="icon"><img src="icons/icon-merch.png"></div>
 			<div class="text-wrapper">
 				<div class="title">Merch <div class="aux-icon"><img src="icons/icon-arrow-out.png"></div></div>
@@ -354,7 +371,7 @@
 				<div class="title">Roach Studio <div class="aux-icon"><img src="icons/icon-arrow-out.png"></div></div>
 				<div class="subtitle">Experiments</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 
 	<div class="scroll-spacer" id="about-section"></div>
@@ -370,11 +387,11 @@
 	<div class="portfolio-section">
 		<div class="title">Select Investments</div>
 		
-		<!-- <div class="view-all-wrapper">
-			<a href="https://twitter.com" target="_blank">
+		<div class="view-all-wrapper">
+			<a href="https://airtable.com/shrb0DNaEUDpO45jT" target="_blank">
 				<div class="view-all">View full portfolio <img src="icons/icon-arrow-out.png"></div>
 			</a>
-		</div> -->
+		</div>
 
 		<div class="company-section-wrapper">
 
@@ -391,7 +408,7 @@
 					<div class="url"><a href="https://relayfi.com" target="_blank">relayfi.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RF0 - 0001</div>
+					<div class="company-id">RF 0 - 0001</div>
 				</div>
 			</div>
 
@@ -408,7 +425,7 @@
 					<div class="url">a<a href="https://ada.support" target="_blank">da.support</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RF0 - 0002</div>
+					<div class="company-id">RF 0 - 0002</div>
 				</div>
 			</div>
 
@@ -425,7 +442,7 @@
 					<div class="url"><a href="https://convictional.com" target="_blank">convictional.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RF0 - 0003</div>
+					<div class="company-id">RF 0 - 0003</div>
 				</div>
 			</div>
 
@@ -442,7 +459,7 @@
 					<div class="url"><a href="https://italic.com" target="_blank">italic.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RF0 - 0013</div>
+					<div class="company-id">RF 0 - 0013</div>
 				</div>
 			</div>
 
@@ -459,7 +476,7 @@
 					<div class="url"><a href="https://getparker.com" target="_blank">getparker.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RF0 - 0016</div>
+					<div class="company-id">RF 0 - 0016</div>
 				</div>
 			</div>
 
@@ -476,7 +493,7 @@
 					<div class="url"><a href="https://rainbow.me" target="_blank">rainbow.me</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RF0 - 0020</div>
+					<div class="company-id">RF 0 - 0020</div>
 				</div>
 			</div>
 
@@ -493,7 +510,7 @@
 					<div class="url"><a href="https://convertkit.com" target="_blank">convertkit.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RF0 - 0024</div>
+					<div class="company-id">RF 0 - 0022</div>
 				</div>
 			</div>
 
@@ -510,7 +527,7 @@
 					<div class="url"><a href="https://railway.app" target="_blank">railway.app</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RF0 - 0027</div>
+					<div class="company-id">RF 0 - 0025</div>
 				</div>
 			</div>
 
@@ -527,7 +544,7 @@
 					<div class="url"><a href="https://replit.com" target="_blank">replit.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0003</div>
+					<div class="company-id">RF I - 0003</div>
 				</div>
 			</div>
 
@@ -544,8 +561,8 @@
 					<div class="url"><a href="https://drop.party" target="_blank">drop.party</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0005</div>
-					<div class="company-status">Acq. by Flexa</div>
+					<div class="company-id">RF I - 0005</div>
+					<div class="company-status">Exit</div>
 				</div>
 			</div>
 
@@ -562,7 +579,7 @@
 					<div class="url"><a href="https://nexhealth.com" target="_blank">nexhealth.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0006</div>
+					<div class="company-id">RF I - 0006</div>
 				</div>
 			</div>
 
@@ -579,7 +596,7 @@
 					<div class="url"><a href="https://levels.fyi" target="_blank">levels.fyi</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0008</div>
+					<div class="company-id">RF I - 0008</div>
 				</div>
 			</div>
 
@@ -596,7 +613,7 @@
 					<div class="url"><a href="https://floatcard.com" target="_blank">floatcard.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0010</div>
+					<div class="company-id">RF I - 0010</div>
 				</div>
 			</div>
 
@@ -613,7 +630,7 @@
 					<div class="url"><a href="https://thebasestation.com" target="_blank">thebasestation.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0013</div>
+					<div class="company-id">RF I - 0013</div>
 				</div>
 			</div>
 
@@ -630,7 +647,7 @@
 					<div class="url"><a href="https://thirdweb.com" target="_blank">thirdweb.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0014</div>
+					<div class="company-id">RF I - 0014</div>
 				</div>
 			</div>
 
@@ -647,7 +664,7 @@
 					<div class="url"><a href="https://parallel.life" target="_blank">parallel.life</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0015</div>
+					<div class="company-id">RF I - 0015</div>
 				</div>
 			</div>
 
@@ -664,7 +681,7 @@
 					<div class="url"><a href="https://welbi.co" target="_blank">welbi.co</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0018</div>
+					<div class="company-id">RF I - 0017</div>
 				</div>
 			</div>
 
@@ -681,7 +698,7 @@
 					<div class="url"><a href="https://adaptive.build" target="_blank">adaptive.build</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0019</div>
+					<div class="company-id">RF I - 0018</div>
 				</div>
 			</div>
 
@@ -698,7 +715,7 @@
 					<div class="url"><a href="https://ocho.com" target="_blank">ocho.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0023</div>
+					<div class="company-id">RF I - 0023</div>
 					<div class="company-status blue">Incubation</div>
 				</div>
 			</div>
@@ -716,7 +733,7 @@
 					<div class="url"><a href="https://tenkeylabs.com/mantle" target="_blank">tenkeylabs.com</a></div>
 				</div>
 				<div class="company-id-container">
-					<div class="company-id">RFI - 0025</div>
+					<div class="company-id">RF I - 0025</div>
 				</div>
 			</div>
 
