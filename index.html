@@ -10,15 +10,10 @@
 	<!-- FONT -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 
 
 	<style type="text/css">
-		@font-face {
-		    font-family: 'Menlo', monospace;
-		    src: url(fonts/Menlo.woff);
-		}
-
 		html {
 			background: #FEFEFE;
 			scroll-behavior: smooth;
@@ -77,7 +72,7 @@
 		.contact-details {
 			margin-top: 30px;
 			color: #6F6F6F;
-			font-family: 'Menlo', monospace;
+			font-family: 'Roboto Mono', monospace;
 			font-size: 14px;
 			letter-spacing: 1px;
 			line-height: 28px;
@@ -209,7 +204,7 @@
 						}
 						.company-card .company-container .company-details .company-name {
 							margin-top: 8px;
-							font-family: 'Menlo', monospace;
+							font-family: 'Roboto Mono', monospace;
 							font-size: 16px;
 						}
 						.company-card .company-container .company-logo img {
@@ -229,7 +224,7 @@
 						}
 						.company-card .url-container .url {
 							margin-top: 8px;
-							font-family: 'Menlo', monospace;
+							font-family: 'Roboto Mono', monospace;
 							font-size: 16px;
 
 							text-decoration: underline;
@@ -245,7 +240,7 @@
 						border-top: 1px dashed #E0E0E0;
 					}
 						.company-card .company-id-container .company-id {
-							font-family: 'Menlo', monospace;
+							font-family: 'Roboto Mono', monospace;
 							font-size: 14px;
 						}
 						.company-card .company-id-container .company-status {
@@ -255,20 +250,20 @@
 							font-weight: 600;
 							letter-spacing: 0.5px;
 
-							background: #171717;
+							background: #748094;
 							padding: 5px 10px;
 							border-radius: 100px;
 						}
-							.company-card .company-id-container .company-status.blue {
-								background: #006BD8;
+							.company-card .company-id-container .company-status.incubation {
+								background: #FA4163;
 							}
-					.portfolio-section .company-card.dead {
+					.portfolio-section .company-card.inactive {
 						opacity: 0.5;
 					}
-					.portfolio-section .company-card.dead .company-name, .company-card.dead .url {
+					.portfolio-section .company-card.inactive .company-name, .company-card.inactive .url {
 						text-decoration: line-through;
 					}
-					.portfolio-section .company-card:not(.dead):hover {
+					.portfolio-section .company-card:not(.inactive):hover {
 						background-image: linear-gradient(to top left, #F7F7F7, #FBFBFD);
 					}
 
@@ -374,9 +369,9 @@
 
 	<div class="scroll-spacer" id="about-section"></div>
 	<div class="about-section">
-		<span class="highlight">Roach is an early-stage investment firm.</span> The fund is run by a solo manager: <a href="https://twitter.com/fahdananta" target="_blank">Fahd Ananta</a>. I’m a <a href="https://linkedin.com/in/fananta" target="_blank">former builder</a> and now an investor.
+		<span class="highlight">Roach Capital is an investment firm that invests in early-stage internet, software, and technology companies.</span>
 		<br><br>
-		As a fund, we invest $100-250K into early stage companies across any vertical, anywhere in the world. Learn more about <a href="https://fahdananta.notion.site/More-about-Roach-7442abe5ada345559352c7228683696b?pvs=4" target="_blank">how we work</a>.
+		As a fund, we invest $100-250K into early stage companies across any vertical, anywhere in the world.</span> The fund is run by a solo manager: <a href="https://twitter.com/fahdananta" target="_blank">Fahd Ananta</a>.
 		<br><br>
 		If you’re a builder, reach out with a URL or prototype, what you're building, and why it should exist to <a href="">fahd@roachcap.com</a>.
 	</div>
@@ -385,11 +380,11 @@
 	<div class="portfolio-section">
 		<div class="title">Select Investments</div>
 		
-		<div class="view-all-wrapper">
+		<!-- <div class="view-all-wrapper">
 			<a href="https://airtable.com/shrb0DNaEUDpO45jT" target="_blank">
 				<div class="view-all">View full portfolio <img src="icons/icon-arrow-out.png"></div>
 			</a>
-		</div>
+		</div> -->
 
 		<div class="company-section-wrapper">
 
@@ -546,7 +541,7 @@
 				</div>
 			</div>
 
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
+			<div class="company-card inactive" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
 				<div class="company-container">
 					<div class="company-details">
 						<div class="label">COMPANY</div>
@@ -560,7 +555,7 @@
 				</div>
 				<div class="company-id-container">
 					<div class="company-id">RF I - 0005</div>
-					<div class="company-status">Exit</div>
+					<div class="company-status">Acquired</div>
 				</div>
 			</div>
 
@@ -704,17 +699,17 @@
 				<div class="company-container">
 					<div class="company-details">
 						<div class="label">COMPANY</div>
-						<div class="company-name">Ocho</div>
+						<div class="company-name">Carry</div>
 					</div>
-					<div class="company-logo"><img src='logos/logo-ocho.png'></div>
+					<div class="company-logo"><img src='logos/logo-carry.png'></div>
 				</div>
 				<div class="url-container">
 					<div class="label">URL</div>
-					<div class="url"><a href="https://ocho.com" target="_blank">ocho.com</a></div>
+					<div class="url"><a href="https://carrymoney.com" target="_blank">carrymoney.com</a></div>
 				</div>
 				<div class="company-id-container">
 					<div class="company-id">RF I - 0022</div>
-					<div class="company-status blue">Incubated</div>
+					<div class="company-status incubation">Incubation</div>
 				</div>
 			</div>
 
@@ -722,7 +717,7 @@
 				<div class="company-container">
 					<div class="company-details">
 						<div class="label">COMPANY</div>
-						<div class="company-name">Mantle (fka TKL)</div>
+						<div class="company-name">Mantle</div>
 					</div>
 					<div class="company-logo"><img src='logos/logo-mantle.png'></div>
 				</div>
@@ -735,7 +730,7 @@
 				</div>
 			</div>
 
-			<div class="footer">&copy; 2023 Roach Capital Management, LLC. All rights reserved.</div>
+			<div class="footer">&copy; <script>document.write(new Date().getFullYear())</script> Roach Capital Management, LLC. All rights reserved.</div>
 
 		</div>
 	</div>
@@ -743,7 +738,4 @@
 	<!-- CARD TILT ANIMATION -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
-	<script type="text/javascript">
-		console.log('**************************************************************************************************\n*                                                                                                *\n*    We %s developer tools at Roach. Let\'s find time to chat: https://calendly.com/roachcap		 *\n*                                                                                                *\n**************************************************************************************************', '😍');
-	</script>
 </body>
