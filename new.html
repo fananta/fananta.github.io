@@ -30,12 +30,14 @@
 		a:link, a:visited, a:active { color: inherit; }
 		a:hover { color: #F6535D; }
 
+
 		body {
 			font-family: 'Manrope', sans-serif;
 			font-size: 14px;
 			width: 53%;
 			margin: auto;
 			color: #FEFEFE;
+			overflow: hidden;
 		}
 
 		#background-video {
@@ -111,15 +113,19 @@
 				font-size: 28px;
 				line-height: 40px;
 			}
-			.secondary-title { margin-top: 40px; }
-			.nav { margin-top: 80px; }
+			.secondary-title {
+				margin-top: 40px;
+/*				font-size: 16px;*/
+/*				line-height: 26px;*/
+			}
+			.nav { margin-top: 50px; }
 		}
 	</style>
 </head>
 
 <body>
 
-	<video id="background-video" autoplay loop muted playsinline>
+	<video id="background-video" autoplay loop muted defaultMuted playsinline>
 	  <source src="bg-super-8.mp4" type="video/mp4">
 	</video>
 
