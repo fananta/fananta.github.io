@@ -10,291 +10,113 @@
 	<!-- FONT -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Roboto+Mono&display=swap" rel="stylesheet">
 
 
 	<style type="text/css">
 		html {
-			background: #FEFEFE;
+			background: #000;
 			scroll-behavior: smooth;
 		}
 
 		::selection {
-			background: rgba(110, 83, 246, 0.15);
+			background: rgba(0, 0, 0, 0);
 		}
 		::-moz-selection {
-			background: rgba(110, 83, 246, 0.15);
+			background: rgba(0, 0, 0, 0);
 		}
 
 		a { text-decoration: none; }
 		a:link, a:visited, a:active { color: inherit; }
-		a:hover { color: #171717; }
+		a:hover { color: #6E53F6; }
+
 
 		body {
 			font-family: 'Manrope', sans-serif;
 			font-size: 14px;
 			width: 53%;
 			margin: auto;
-			color: #171717;
+			color: #FEFEFE;
+			overflow: hidden;
+		}
+
+		#background-video {
+		  width: 100vw;
+		  height: 100vh;
+		  object-fit: cover;
+		  position: fixed;
+		  left: 0;
+		  right: 0;
+		  top: 0;
+		  bottom: 0;
+		  z-index: -1;
+		  opacity: 0.3;
 		}
 
 		.logo-wrapper {
 			margin: auto;
 			margin-top: 120px;
 			text-align: center;
-			width: min-content;
-
-			border-radius: 12px;
-			background: #FBFBFD;
-			box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.05);
-			
+			width: min-content;	
 		}
 			.logo-wrapper img {
-				height: 64px;
-				padding-right: 30px;
+				height: 80px;
 			}
 
 		.main-title {
 			margin-top: 80px;
 
 			font-family: 'Manrope', sans-serif;
-			font-size: 40px;
+			font-size: 32px;
 			font-weight: 400;
-			line-height: 64px;
+			line-height: 44px;
 			letter-spacing: 0.5px;
+			text-align: center;
 		}
-			.main-title .light-gradient {
-				background: -webkit-linear-gradient(left, #171717, #9F9F9F, #9F9F9F, #9F9F9F);
-				background: linear-gradient(to right, #171717, #9F9F9F, #9F9F9F, #9F9F9F); 
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-			}
+		.secondary-title {
+			margin-top: 60px;
+
+			font-family: 'Manrope', sans-serif;
+			font-size: 18px;
+			line-height: 28px;
+			letter-spacing: 0.5px;
+			text-align: center;
+			color: #595C6B;
+		}
+		.nav {
+			margin-top: 100px;
+			text-align: center;
+
+			font-family: 'Manrope', sans-serif;
+			font-weight: 300;
+			font-size: 14px;
+			letter-spacing: 1px;
+			color: #FEFEFE;
+		}
 		.contact-details {
-			margin-top: 30px;
-			color: #6F6F6F;
+			margin-top: 130px;
+
+			color: #595C6B;
 			font-family: 'Roboto Mono', monospace;
 			font-size: 14px;
 			letter-spacing: 1px;
 			line-height: 28px;
+			text-align: center;
 		}
 
-		.nav-list {
-			max-width: 100%;
-			width: 550px;
-			margin: auto;
-			margin-top: 100px;
-		}
-			.nav-item {
-				display: flex;
 
-				padding: 15px;
-				border-radius: 12px;
-				transition: background-color 0.2s ease;
+		@media (max-width: 750px) {
+			body { width: 80%; }
+			.logo-wrapper { margin-top: 50px; }
+			.main-title {
+				margin-top: 50px;
+				font-size: 24px;
+				line-height: 36px;
 			}
-				.nav-item.extra-top-margin { margin-top: 40px; }
-				.nav-item:hover {
-					background: #F7F7F7;
-					cursor: pointer;
-				}
-				.nav-item .icon img {
-					width: 50px;
-				}
-				.nav-item .text-wrapper {
-					margin-left: 25px;
-				}
-					.nav-item .text-wrapper .title {
-						display: flex;
-						align-items: center;
-
-						font-family: Manrope;
-						font-size: 16px;
-						font-weight: 700;
-						letter-spacing: 0.9px;
-					}
-						.nav-item .text-wrapper .title .aux-icon {
-							margin-left: 6px;
-						}
-							.nav-item .text-wrapper .title .aux-icon img {
-								width: 15px;
-							}
-					.nav-item .text-wrapper .subtitle {
-						margin-top: 5px;
-						color: #6F6F6F;
-						font-family: Manrope;
-						font-size: 14px;
-						font-weight: 500;
-						letter-spacing: 0.6px;
-					}
-
-		.about-section {
-			margin-top: 150px;
-			width: 100%;
-
-			color: #6F6F6F;
-			font-family: Manrope;
-			font-size: 20px;
-			font-weight: 400;
-			line-height: 38px;
-			letter-spacing: 0.5px;
-		}
-			.about-section .highlight {
-				color: #171717;
-				font-weight: 500;
-			}
-			.about-section a { text-decoration: none; border-bottom: 1px solid #9F9F9F; }
-			.about-section a:hover { border-color: inherit; }
-
-
-		.portfolio-section {
-			margin-top: 100px;
-		}
-			.portfolio-section .title {
-				font-size: 26px;
-				font-weight: 600;
-				letter-spacing: 0.6px;
-			}
-			.portfolio-section .view-all-wrapper {
-				width: fit-content;
-			}
-				.portfolio-section .view-all {
-					color: #6F6F6F;
-					margin-top: 10px;
-
-					font-size: 14px;
-					font-weight: 500;
-					letter-spacing: 0.4px;
-
-					background: #F7F7F7;
-					border-radius: 10px;
-					padding: 12px;
-				}
-					.portfolio-section .view-all:hover {
-						background: #F0F0F0;
-						cursor: pointer;
-					}
-					.portfolio-section .view-all img {
-						width: 12px;
-						margin-left: 4px;
-					}
-			.portfolio-section .company-section-wrapper {
-				margin-top: 30px;
-
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				justify-content: flex-start;
-				gap: 10px;
-			}
-				.portfolio-section .company-section-wrapper .company-card {
-					width: 380px;
-					border-radius: 8px;
-					background: #F9F9F9;
-				}
-					.company-card .company-container {
-						display: flex;
-						justify-content: space-between;
-						align-items: flex-start;
-						margin: 40px;
-						margin-bottom: 0;
-					}
-						.company-card .company-container .company-details .label {
-							font-size: 12px;
-							font-weight: 800;
-							letter-spacing: 1px;
-						}
-						.company-card .company-container .company-details .company-name {
-							margin-top: 8px;
-							font-family: 'Roboto Mono', monospace;
-							font-size: 16px;
-						}
-						.company-card .company-container .company-logo img {
-							max-width: 60px;
-							max-height: 30px;
-							border-radius: 2px;
-						}
-					.company-card .url-container {
-						padding-left: 40px;
-					}
-						.company-card .url-container .label {
-							margin-top: 26px;
-
-							font-size: 12px;
-							font-weight: 800;
-							letter-spacing: 1px;
-						}
-						.company-card .url-container .url {
-							margin-top: 8px;
-							font-family: 'Roboto Mono', monospace;
-							font-size: 16px;
-
-							text-decoration: underline;
-						}
-					.company-card .company-id-container {
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-
-						margin-top: 26px;
-						padding: 24px 40px;
-
-						border-top: 1px dashed #E0E0E0;
-					}
-						.company-card .company-id-container .company-id {
-							font-family: 'Roboto Mono', monospace;
-							font-size: 14px;
-						}
-						.company-card .company-id-container .company-status {
-							color: #FEFEFE;
-							font-family: 'Manrope';
-							font-size: 12px;
-							font-weight: 600;
-							letter-spacing: 0.5px;
-
-							background: #748094;
-							padding: 5px 10px;
-							border-radius: 100px;
-						}
-							.company-card .company-id-container .company-status.incubation {
-								background: #FF806F;
-							}
-					.portfolio-section .company-card.inactive {
-						opacity: 0.5;
-					}
-					.portfolio-section .company-card.inactive .company-name, .company-card.inactive .url {
-						text-decoration: line-through;
-					}
-					.portfolio-section .company-card:not(.inactive):hover {
-						background-image: linear-gradient(to top left, #F7F7F7, #FBFBFD);
-					}
-
-		.footer {
-			margin-top: 100px;
-			padding-bottom: 40px;
-
-			font-family: 'Manrope', sans-serif;
-			font-size: 14px;
-			letter-spacing: 0.5px;
-			color: #B0B0B0;
-		}
-
-		@media only screen and (max-width: 1500px) {
-			body {
-				width: 55%;
-			}
-		}
-		@media only screen and (max-width: 1400px) {
-			body {
-				width: 65%;
-			}
-		}
-		@media only screen and (max-width: 1200px) {
-			body {
-				width: 80%;
-			}
-		}
-		@media only screen and (max-width: 980px) {
-			body {
-				width: 80%;
+			.secondary-title {
+				margin-top: 40px;
+				font-size: 14px;
+				line-height: 22px;
 			}
 		}
 	</style>
@@ -302,440 +124,21 @@
 
 <body>
 
-	<div class="logo-wrapper" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-		<img src="roach-logo-text.png">
+	<video id="background-video" autoplay loop muted defaultMuted playsinline>
+	  <source src="bg-super-8.mp4" type="video/mp4">
+	</video>
+
+	<div class="logo-wrapper">
+		<img src="roach-logo.png">
 	</div>
 
-	<div class="main-title">Investing in magical products and outlier founders <span class="light-gradient">at the earliest stage.</span></div>
+	<div class="main-title">Roach Capital builds and invests in internet, software, and technology companies.</div>
+	<div class="secondary-title">Ada, Adaptive, Carry, ConvertKit, Float, Italic, NexHealth, Parallel, Parker, Railway, Rainbow, Replit, and more.</div>
+	<!-- <div class="nav">
+		Investors&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Incubations&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Research</div>
+	</div> -->
 	<div class="contact-details">
 		<a href="https://twitter.com/roachcap" target="_blank">@RoachCap</a> · fahd@roachcap.com</div>
 	</div>
-	
 
-	<div class="nav-list">
-
-		<a href="#info">
-		<div class="nav-item">
-			<div class="icon"><img src="icons/icon-about.png"></div>
-			<div class="text-wrapper">
-				<div class="title">The Fund</div>
-				<div class="subtitle">How we work with you</div>
-			</div>
-		</div>
-		</a>
-
-		<a href="#portfolio">
-		<div class="nav-item">
-			<div class="icon"><img src="icons/icon-portfolio.png"></div>
-			<div class="text-wrapper">
-				<div class="title">Portfolio</div>
-				<div class="subtitle">Our investments</div>
-			</div>
-		</div>
-		</a>
-
-		<!-- <div class="nav-item">
-			<div class="icon"><img src="icons/icon-lps.png"></div>
-			<div class="text-wrapper">
-				<div class="title">For LPs <div class="aux-icon"><img src="icons/icon-lock.png"></div></div>
-				<div class="subtitle">Fund updates & performance</div>
-			</div>
-		</div>
-
-		<div class="nav-item">
-			<div class="icon"><img src="icons/icon-memo.png"></div>
-			<div class="text-wrapper">
-				<div class="title">Letters</div>
-				<div class="subtitle">Research memos</div>
-			</div>
-		</div>
-
-		<div class="nav-item extra-top-margin">
-			<div class="icon"><img src="icons/icon-merch.png"></div>
-			<div class="text-wrapper">
-				<div class="title">Merch <div class="aux-icon"><img src="icons/icon-arrow-out.png"></div></div>
-				<div class="subtitle">Hats, tees, and jackets</div>
-			</div>
-		</div>
-
-		<div class="nav-item">
-			<div class="icon"><img src="icons/icon-studio.png"></div>
-			<div class="text-wrapper">
-				<div class="title">Roach Studio <div class="aux-icon"><img src="icons/icon-arrow-out.png"></div></div>
-				<div class="subtitle">Experiments</div>
-			</div>
-		</div> -->
-	</div>
-
-	<div class="scroll-spacer" id="info"></div>
-	<div class="about-section">
-		<span class="highlight">Roach Capital is an investment firm that invests in early-stage internet, software, and technology companies.</span>
-		<br><br>
-		As a fund, we invest $100-250K into early stage companies across any vertical, anywhere in the world.</span> The fund is run by a solo manager: <a href="https://twitter.com/fahdananta" target="_blank">Fahd Ananta</a>.
-		<br><br>
-		If you’re a builder, reach out with a URL or prototype, what you're building, and why it should exist to <a href="">fahd@roachcap.com</a>.
-	</div>
-
-	<div class="scroll-spacer" id="portfolio"></div>
-	<div class="portfolio-section">
-		<div class="title">Select Investments</div>
-		
-		<!-- <div class="view-all-wrapper">
-			<a href="https://airtable.com/shrb0DNaEUDpO45jT" target="_blank">
-				<div class="view-all">View full portfolio <img src="icons/icon-arrow-out.png"></div>
-			</a>
-		</div> -->
-
-		<div class="company-section-wrapper">
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Relay</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-relay.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://relayfi.com" target="_blank">relayfi.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF 0 - 0001</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Ada</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-ada.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url">a<a href="https://ada.support" target="_blank">da.support</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF 0 - 0002</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Convictional</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-convictional.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://convictional.com" target="_blank">convictional.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF 0 - 0003</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Italic</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-italic.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://italic.com" target="_blank">italic.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF 0 - 0013</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Parker</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-parker.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://getparker.com" target="_blank">getparker.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF 0 - 0016</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Rainbow</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-rainbow.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://rainbow.me" target="_blank">rainbow.me</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF 0 - 0020</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">ConvertKit</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-convertkit.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://convertkit.com" target="_blank">convertkit.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF 0 - 0022</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Railway</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-railway.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://railway.app" target="_blank">railway.app</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF 0 - 0025</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Replit</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-replit.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://replit.com" target="_blank">replit.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0003</div>
-				</div>
-			</div>
-
-			<div class="company-card inactive" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Drop Party</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-dropparty.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://drop.party" target="_blank">drop.party</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0005</div>
-					<div class="company-status">Acquired</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">NexHealth</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-nexhealth.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://nexhealth.com" target="_blank">nexhealth.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0006</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Levels FYI</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-levelsfyi.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://levels.fyi" target="_blank">levels.fyi</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0008</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Float</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-float.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://floatcard.com" target="_blank">floatcard.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0010</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Basestation</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-basestation.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://thebasestation.com" target="_blank">thebasestation.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0013</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Thirdweb</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-thirdweb.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://thirdweb.com" target="_blank">thirdweb.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0014</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Parallel</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-parallel.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://parallel.life" target="_blank">parallel.life</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0015</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Welbi</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-welbi.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://welbi.co" target="_blank">welbi.co</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0017</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Adaptive</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-adaptive.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://adaptive.build" target="_blank">adaptive.build</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0018</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Carry</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-carry.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://carrymoney.com" target="_blank">carrymoney.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0022</div>
-					<div class="company-status incubation">Incubation</div>
-				</div>
-			</div>
-
-			<div class="company-card" data-tilt data-tilt-glare="true" data-tilt-maxGlare=0.8>
-				<div class="company-container">
-					<div class="company-details">
-						<div class="label">COMPANY</div>
-						<div class="company-name">Mantle</div>
-					</div>
-					<div class="company-logo"><img src='logos/logo-mantle.png'></div>
-				</div>
-				<div class="url-container">
-					<div class="label">URL</div>
-					<div class="url"><a href="https://withmantle.com" target="_blank">withmantle.com</a></div>
-				</div>
-				<div class="company-id-container">
-					<div class="company-id">RF I - 0024</div>
-				</div>
-			</div>
-
-			<div class="footer">&copy; <script>document.write(new Date().getFullYear())</script> Roach Capital Management, LLC. All rights reserved.</div>
-
-		</div>
-	</div>
-
-	<!-- CARD TILT ANIMATION -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
 </body>
