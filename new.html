@@ -30,7 +30,7 @@
 			cursor: inherit;
 		}
 		a:link, a:visited, a:active { color: inherit; }
-		a:hover { color: #E03434; }
+		a:hover { color: #FF806F; }
 
 		/* CURSOR */
 		* {
@@ -55,7 +55,7 @@
 		  width: 22px !important;
 		  height: 22px !important;
 		}
-		.hover-copy {
+/*		.hover-copy {
 		  background: blue !important;
 		  width: 50px !important;
 		  height: 14px !important;
@@ -63,7 +63,7 @@
 		  text-align: center;
 		  font-size: 10px;
 		  letter-spacing: 1.5px;
-		}
+		}*/
 
 
 		body {
@@ -87,16 +87,22 @@
 			margin-top: 30px;
 			font-size: 30px;
 			text-transform: uppercase;
-			font-style: italic;
+			letter-spacing: 2px;
 			line-height: 50px;
 			text-align: left;
 		}
+/*			.title .gradient:hover {
+			    background-image: linear-gradient(235deg, #6E53F6, #DB4B90, #FF806F);
+			    background-size: 100%;
+			    -webkit-background-clip: text;
+			    -webkit-text-fill-color: transparent;
+			}*/
 
 		.contact {
 			margin-top: 30px;
 			font-size: 12px;
 			text-transform: uppercase;
-			letter-spacing: 2.5;
+			letter-spacing: 2px;
 			text-align: left;
 			line-height: 200%;
 		}
@@ -108,21 +114,30 @@
 			justify-content: flex-start;
 
 			margin-top: 100px;
-			margin-bottom: 160px;
 			width: 100%;
 			max-width: 500px;
 		}
 		.flex-item {
 			flex-basis: 50%;
-			margin: 8px 0;
+			margin: 10px 0;
 
-			letter-spacing: 1.5px;
+			letter-spacing: 2px;
 			font-size: 12px;
 			color: #595C6B;
 		}
+		.footer {
+			margin-top: 100px;
+			margin-bottom: 160px;
+
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			text-align: left;
+			color: #33343C;
+		}
 
 		@media (max-width: 750px) {
-			body { width: 70%; }
+			body { width: 75%; }
 			.logo-wrapper { margin-top: 50px; }
 		}
 	</style>
@@ -135,7 +150,6 @@
 		<img src="roach-logo.png">
 	</div>
 
-	<!-- <div class="title" id="title">Roach Capital builds and invests in internet, software, and technology companies.</div> -->
 	<div class="title" id="title">Roach Capital invests in outlier founders building magical products.</div>
 	<div class="contact txt-shuffle">
 		<a href="https://twitter.com/roachcap" target="_blank" id="@RoachCap">@RoachCap</a> · <a id="fahd@roachcap.com">fahd@roachcap.com</a>
@@ -171,6 +185,8 @@
 		<div class="flex-item txt-shuffle"><a id="WANDER" href="https://www.wander.com/" target="_blank">WANDER</a></div>
 		<div class="flex-item txt-shuffle"><a id="WELBI" href="https://www.welbi.co/" target="_blank">WELBI</a></div>
 	</div>
+
+	<div class="footer">ROACH CAPITAL MANAGEMENT INC.</div>
 
 </body>
 
