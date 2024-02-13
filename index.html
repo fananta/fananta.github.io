@@ -118,7 +118,8 @@
 
 			letter-spacing: 2px;
 			font-size: 12px;
-			color: #595C6B;
+/*			color: #595C6B;*/
+			color: #33343C;
 		}
 
 		.footer {
@@ -129,8 +130,7 @@
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			text-align: left;
-			color: #595C6B;
-			opacity: 0.5;
+			color: #33343C;
 		}
 
 		@media (max-width: 750px) {
@@ -223,14 +223,14 @@
 	});
 
 	//HOVER OPACITY EFFECT
-	$('.flex-item a').hover(
-		function() {
-			$('.flex-item').css('opacity', '0.5');
-			$(this).parent().css('opacity', '1.0');
-		}, function() {
-			$('.flex-item').css('opacity', '1');
-		}
-	);
+	// $('.flex-item a').hover(
+	// 	function() {
+	// 		$('.flex-item').css('opacity', '0.5');
+	// 		$(this).parent().css('opacity', '1.0');
+	// 	}, function() {
+	// 		$('.flex-item').css('opacity', '1');
+	// 	}
+	// );
 
 	//COPY EMAIL TO CLIPBOARD
 	email_elem = document.getElementById('fahd@roachcap.com')
