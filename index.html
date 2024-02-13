@@ -129,7 +129,8 @@
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			text-align: left;
-			color: #33343C;
+			color: #595C6B;
+			opacity: 0.5;
 		}
 
 		@media (max-width: 750px) {
@@ -189,6 +190,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="bundle.js"></script>
 <script type="text/javascript">
+
+	//CURSOR
 	$(document).mousemove(function(e) {
 
 	  const cursor = $('#cursor');
@@ -219,7 +222,17 @@
 	  cursor.show()
 	});
 
+	//HOVER OPACITY EFFECT
+	$('.flex-item a').hover(
+		function() {
+			$('.flex-item').css('opacity', '0.5');
+			$(this).parent().css('opacity', '1.0');
+		}, function() {
+			$('.flex-item').css('opacity', '1');
+		}
+	);
 
+	//COPY EMAIL TO CLIPBOARD
 	email_elem = document.getElementById('fahd@roachcap.com')
 	email_elem.addEventListener('click', function() {
 		navigator.clipboard.writeText("fahd@roachcap.com");
