@@ -32,7 +32,8 @@
 
 	<style type="text/css">
 		html {
-			background: #0D0D0D;
+/*			background: #0D0D0D;*/
+			background: #EEECE8;
 		}
 
 		::selection {
@@ -47,7 +48,7 @@
 			cursor: inherit;
 		}
 		a:link, a:visited, a:active { color: inherit; }
-		a:hover { color: #FF6060; }
+		a:hover { color: #000; }
 
 		/* CURSOR */
 		* {
@@ -78,7 +79,7 @@
 			font-size: 14px;
 			width: 60%;
 			margin: auto;
-			color: #FFF;
+			color: #000;
 		}
 
 		.logo-wrapper {
@@ -92,11 +93,12 @@
 
 		.title {
 			margin-top: 30px;
-			font-size: 28px;
+			font-size: 24px;
 			text-transform: uppercase;
 			letter-spacing: 1px;
-			line-height: 44px;
+			line-height: 40px;
 			text-align: left;
+			max-width: 800px;
 		}
 
 		.contact {
@@ -106,7 +108,7 @@
 			letter-spacing: 2px;
 			text-align: left;
 			line-height: 200%;
-			color: #52535D;
+			color: #B5B3AF;
 		}
 		
 		.flex-wrapper {
@@ -126,9 +128,14 @@
 
 			letter-spacing: 2px;
 			font-size: 12px;
-			color: #52535D;
-
+			color: #B5B3AF;
 		}
+			.flex-item a:hover {
+				background-color: #E3E3E1;
+				padding: 6px;
+				border-radius: 5px;
+			}
+			.flex-item:has(a:hover) { color: red; }
 
 		.footer {
 			margin-top: 100px;
@@ -138,7 +145,8 @@
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			text-align: left;
-			color: #52535D;
+			color: #B5B3AF;
+/*			opacity: 0.5;*/
 		}
 
 		@media (max-width: 750px) {
@@ -155,7 +163,8 @@
 		<img src="roach-logo.png">
 	</div>
 
-	<div class="title" id="title">Roach Capital invests in outlier founders building magical products.</div>
+	<!-- <div class="title" id="title">Roach Capital invests in outlier founders building magical products.</div> -->
+	<div class="title" id="title">We build and invest in internet, software, and technology-enabled businesses.</div>
 	<div class="contact txt-shuffle">
 		<a href="https://twitter.com/roachcap" target="_blank" id="@RoachCap">@RoachCap</a> &middot; <a id="fahd@roachcap.com">fahd@roachcap.com</a>
 	</div>
@@ -231,6 +240,17 @@
 	  cursor.show()
 	});
 
+	//MARGIN OFFSET ON HOVER
+	$('.flex-item a').hover(
+		function() {
+			$(this).parent().css('margin-left', '-6px');
+			$(this).parent().css('margin-right', '6px');
+		}, function() {
+			$('.flex-item').css('margin-left', '0');
+			$('.flex-item').css('margin-right', '0');
+		}
+	);
+
 	//HOVER OPACITY EFFECT
 	// $('.flex-item a').hover(
 	// 	function() {
@@ -242,9 +262,9 @@
 	// );
 
 	//COPY EMAIL TO CLIPBOARD
-	email_elem = document.getElementById('fahd@roachcap.com')
-	email_elem.addEventListener('click', function() {
-		navigator.clipboard.writeText("fahd@roachcap.com");
-	})
+	// email_elem = document.getElementById('fahd@roachcap.com')
+	// email_elem.addEventListener('click', function() {
+	// 	navigator.clipboard.writeText("fahd@roachcap.com");
+	// })
 
 </script>
