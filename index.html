@@ -27,14 +27,12 @@
 	<!-- FONT -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Reddit+Mono&display=swap" rel="stylesheet">
 
 
 	<style type="text/css">
 		html {
 			background: #0D0D0D;
-/*			background: #EEECE8;*/
 		}
 
 		::selection {
@@ -76,12 +74,11 @@
 		}
 
 		body {
-			font-family: 'Space Mono', monospace;
+			font-family: 'Reddit Mono', monospace;
 			font-size: 14px;
 			width: 60%;
 			margin: auto;
 			color: #FFF;
-/*			color: #000;*/
 		}
 
 		.logo-wrapper {
@@ -95,12 +92,10 @@
 
 		.title {
 			margin-top: 30px;
-			font-family: 'DM Mono', monospace;
-			font-weight: 500;
-			font-size: 28px;
+			font-size: 22px;
 			text-transform: uppercase;
-			letter-spacing: 1.5px;
-			line-height: 44px;
+			letter-spacing: 1.2px;
+			line-height: 40px;
 			text-align: left;
 			max-width: 800px;
 		}
@@ -112,10 +107,31 @@
 			letter-spacing: 2px;
 			text-align: left;
 			line-height: 200%;
-/*			color: #B5B3AF;*/
-			color: #52535D;
+			color: #595C6B;
 		}
+
+		.nav {
+			margin-top: 50px;
+			margin-bottom: 100px;
+		}
+			.nav .nav-item {
+				margin: 22px 0;
+				letter-spacing: 2px;
+				font-size: 12px;
+				color: #595C6B;
+			}
 		
+		.portfolio-subtitle {
+			letter-spacing: 2px;
+			font-size: 12px;
+			color: #C180E5;
+
+			padding-top: 100px;
+			padding-bottom: 15px;
+
+			border-bottom: 0.5px solid #C180E5;
+		}
+
 		.flex-wrapper {
 			display: flex;
 			flex-direction: ROW;
@@ -123,7 +139,7 @@
 			justify-content: flex-start;
 			column-gap: 20%;
 
-			margin-top: 100px;
+			margin-top: 40px;
 			width: 100%;
 			max-width: 500px;
 		}
@@ -133,27 +149,24 @@
 
 			letter-spacing: 2px;
 			font-size: 12px;
-/*			color: #B5B3AF;*/
-			color: #52535D;
+			color: #3B3C45;
 		}
 			.flex-item a:hover {
-/*				background-color: #E3E3E1;*/
-				background-color: #E03434;
+				background-color: #C180E5;
 				padding: 6px;
 				border-radius: 5px;
 			}
 
 		.footer {
 			margin-top: 100px;
-			margin-bottom: 160px;
+			margin-bottom: 200px;
 
 			font-size: 12px;
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			text-align: left;
-/*			color: #B5B3AF;*/
-			color: #52535D;
-			opacity: 0.5;
+			color: #3B3C45;
+			opacity: 0.4;
 		}
 
 		@media (max-width: 750px) {
@@ -170,12 +183,17 @@
 		<img src="roach-logo.png">
 	</div>
 
-	<!-- <div class="title" id="title">Roach Capital invests in outlier founders building magical products.</div> -->
-	<div class="title" id="title">We build and invest in internet, software, and technology-enabled businesses.</div>
+	<div class="title" id="title">We build and invest in internet, software, and technology businesses led by outlier founders.</div>
 	<div class="contact txt-shuffle">
 		<a href="https://twitter.com/roachcap" target="_blank" id="@RoachCap">@RoachCap</a> &middot; <a id="fahd@roachcap.com">fahd@roachcap.com</a>
 	</div>
 
+<!-- 	<div class="nav">
+		<div class="nav-item txt-shuffle"><a id="LP DASHBOARD" href="">LP DASHBOARD</a></div>
+		<div class="nav-item txt-shuffle"><a id="INCUBATIONS" href="">INCUBATIONS</a></div>
+	</div> -->
+
+	<div class="portfolio-subtitle">COMPANIES</div>
 	<div class="flex-wrapper">
 		<div class="flex-item txt-shuffle"><a id="ADA" href="https://www.ada.cx/" target="_blank">ADA</a></div>
 		<div class="flex-item txt-shuffle"><a id="ADAPTIVE" href="https://www.adaptive.build/" target="_blank">ADAPTIVE</a></div>
@@ -259,19 +277,13 @@
 	);
 
 	//HOVER OPACITY EFFECT
-	// $('.flex-item a').hover(
-	// 	function() {
-	// 		$('.flex-item').css('opacity', '0.5');
-	// 		$(this).parent().css('opacity', '1.0');
-	// 	}, function() {
-	// 		$('.flex-item').css('opacity', '1');
-	// 	}
-	// );
-
-	//COPY EMAIL TO CLIPBOARD
-	// email_elem = document.getElementById('fahd@roachcap.com')
-	// email_elem.addEventListener('click', function() {
-	// 	navigator.clipboard.writeText("fahd@roachcap.com");
-	// })
+	$('.flex-item a').hover(
+		function() {
+			$('.flex-item').css('opacity', '0.4');
+			$(this).parent().css('opacity', '1.0');
+		}, function() {
+			$('.flex-item').css('opacity', '1');
+		}
+	);
 
 </script>
