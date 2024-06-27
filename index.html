@@ -47,7 +47,6 @@
 			cursor: inherit;
 		}
 		a:link, a:visited, a:active { color: inherit; }
-/*		a:hover { color: #F3568D; }*/
 
 		/* CURSOR */
 		* {
@@ -62,7 +61,6 @@
 		  top: 0;
 		  left: 0;
 		  display: none;
-		  /* background: #E03434; */
 		  background: #6E53F6;
 		  opacity: 0.85;
 		  border-radius: 1000px;
@@ -111,6 +109,10 @@
 			line-height: 200%;
 			color: #595C6B;
 		}
+			.contact a:hover {
+				color: #000;
+				font-weight: 500;
+			}
 
 		.nav {
 			margin-top: 100px;
@@ -129,19 +131,9 @@
 			}
 				.nav .nav-item:hover {
 					color: #FFF;
-					background: #6E53F6;
-					border-color: #6E53F6;
+					background: #000;
+					border-color: #000;
 				}
-			.nav-item.disabled:hover {
-				/* opacity: 0.5; */
-				/* border: 0; */
-				/* opacity: 0.5; */
-				background: inherit;
-				color: #595C6B;
-				border-color: #595C6B;
-				opacity: 0.5;
-			}
-
 
 		.flex-border {
 			margin-top: 500px;
@@ -205,7 +197,7 @@
 
 	<div class="nav">
 		<div class="nav-item txt-shuffle"><a id="COMPANIES" href="#companies">COMPANIES</a></div>
-		<div class="nav-item txt-shuffle disabled"><a id="INCUBATIONS" href="">INCUBATIONS</a></div>
+		<div class="nav-item txt-shuffle"><a id="INCUBATIONS" href="">INCUBATIONS</a></div>
 	</div>
 
 	<a name="companies"></a>
