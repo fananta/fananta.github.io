@@ -1,0 +1,167 @@
+<!-- <!DOCTYPE html>
+<html lang="en"> -->
+
+<!-- HTML Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sherpa</title>
+
+<head>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+PE:wght@100..400&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        @font-face {
+            font-family: "Soehne";
+            src: url("soehne-buch.woff2") format("woff2");
+        }
+
+        html {
+            background: url('bg.png') no-repeat center center fixed;
+            background-size: cover;
+            cursor: url('cursor-ram.png'), auto;
+            position: relative;
+            z-index: 0;
+        }    
+        a {
+			text-decoration: none;
+			cursor: inherit;
+		}
+		a:link, a:visited, a:active { color: inherit; }
+        body {
+            margin: 0;
+            padding: 0;
+
+            font-family: "Soehne", sans-serif;
+            font-size: 22px;
+        }
+
+        .sherpa-container {
+            margin: auto;
+            margin-top: 16.5%;
+
+            width: 500px;
+            position: relative;
+            z-index: auto;
+        }
+        /* background: -webkit-linear-gradient(left, #ff4500, #ff8c00, #ff7f50, #ff6347, #ff0000); */
+
+        .sherpa-wordmark {
+            font-family: "Playwrite PE", cursive;
+            font-optical-sizing: auto;
+            font-weight: 350;
+            font-style: normal;
+
+            text-align: left;
+            font-size: 30px;
+            color: #000;
+        }
+
+        .body-text {
+            margin-top: 20px;
+            position: relative;
+            z-index: auto;
+        }
+            .body-text span {
+                display: inline-block;
+                margin-bottom: 10px;
+                position: relative;
+                z-index: auto;
+            }
+            .body-text span.highlight {
+                background-color: #E3E3E3;
+                border-radius: 4px;
+                padding: 0px 5px;
+                position: relative;
+                z-index: auto;
+                display: inline-block;
+            }
+                .body-text span.highlight .label-img {
+                    width: 24px;
+                    vertical-align: -4px;
+                    margin-right: 2px;
+                }
+            .body-text span.highlight:hover {
+                transform: rotate(7deg);
+                transition: transform 0.1s ease;
+                z-index: 2;
+            }
+            .body-text span.highlight:nth-child(2n):hover {
+                transform: rotate(-7deg);
+                transition: transform 0.1s ease;
+            }
+            .hover-image {
+                display: none;
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1000;
+                max-width: 400px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                margin-bottom: 10px;
+                border: 4px solid #FFF;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            .button {
+                margin-top: 40px;
+                background-color: #000;
+                color: #FFF;
+                padding: 7px 14px;
+                border-radius: 1000px;
+                width: fit-content;
+
+                font-size: 14px;
+                letter-spacing: 0.3px;
+                position: relative;
+                z-index: auto;
+            }
+            .button:hover {
+                background-color: #2471E4;
+                transition: background-color 0.3s ease;
+            }
+        .contact-buttons {
+            margin-top: 80px;
+            position: relative;
+            z-index: auto;
+        }
+            .contact-buttons img {
+                width: 20px;
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="sherpa-container">
+        <div class="sherpa-wordmark">Sherpa</div>
+        <div class="body-text"><span class="highlight" data-image="hover-sherpa.png">Sherpa</span> is a magical, <span class="highlight" data-image="hover-newway.png">new way</span> to manage <span class="highlight" data-image="hover-email.png">email</span> for <span class="highlight" data-image="hover-busy.png">busy people</span> from <span class="highlight" data-image="hover-potrero.png">Potrero Hill Engineering <img class="label-img" src="icon-aichip.png"></span>.</div>
+        <a href=""><div class="button">Get Started with Sherpa</div></a>
+        <div class="contact-buttons">
+            <a href="" style="margin-right: 20px;"><img src="icon-twitter.png"></a>
+            <a href=""><img src="icon-email.png"></a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.highlight').forEach(element => {
+            const img = document.createElement('img');
+            img.src = element.dataset.image;
+            img.className = 'hover-image';
+            element.appendChild(img);
+
+            element.addEventListener('mouseenter', () => {
+                img.style.display = 'block';
+            });
+
+            element.addEventListener('mouseleave', () => {
+                img.style.display = 'none';
+            });
+        });
+    </script>
+</body>
