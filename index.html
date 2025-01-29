@@ -32,7 +32,7 @@
 
 	<style type="text/css">
 		html {
-			background: #EFEFEF;
+			background: #FFF;
 		}
 
 		::selection {
@@ -55,8 +55,8 @@
 
 		#cursor {
 		  pointer-events: none;
-		  width: 12px;
-		  height: 12px;
+		  width: 14px;
+		  height: 14px;
 		  position: fixed;
 		  top: 0;
 		  left: 0;
@@ -75,75 +75,53 @@
 		body {
 			font-family: 'Reddit Mono', monospace;
 			font-size: 14px;
-			width: 60%;
+			width: 35%;
 			margin: auto;
-			color: #0D0D0D;
+			color: #000;
 			font-weight: 400;
 		}
 
 		.logo-wrapper {
-			margin-top: 160px;
+			margin-top: 80px;
 			margin-left: -24px;
+			margin-bottom: 60px;
 			width: min-content;	
 		}
 			.logo-wrapper img {
-				height: 80px;
+				height: 70px;
 			}
 
-		.title {
-			margin-top: 30px;
-			font-size: 22px;
+		.section-title {
+			font-size: 14px;
+			font-weight: 600;
 			text-transform: uppercase;
-			letter-spacing: 1.2px;
-			line-height: 40px;
+			letter-spacing: 2.5px;
 			text-align: left;
+			margin-bottom: 20px;
+		}
+		.section-text {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 34px;
+			text-align: left;
+			margin-bottom: 50px;
 			max-width: 800px;
 		}
-		.contact {
-			margin-top: 30px;
-			font-size: 12px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			text-align: left;
-			line-height: 200%;
-			color: #595C6B;
-		}
-			.contact a:hover {
-				color: #000;
-				font-weight: 500;
+			.section-text.heading {
+				/* text-transform: uppercase; */
+				/* letter-spacing: 1.5px; */
+				margin-bottom: 120px;
+			}
+			.section-text.investments {
+				color: #A3A4A9;
 			}
 
-		.flex-border {
-			margin-top: 200px;
-			width: 100%;
-			/* border-top: 1px solid #595C6B; */
-		}
-		.flex-wrapper {
-			display: flex;
-			flex-direction: ROW;
-			flex-wrap: wrap;
-			justify-content: flex-start;
-			column-gap: 20%;
-
-			margin-top: 40px;
-			width: 100%;
-			max-width: 500px;
-		}
-		.flex-item {
-			flex-basis: 40%;
-			margin: 10px 0;
-
-			letter-spacing: 2px;
-			font-size: 12px;
-			color: #A3A4A9;
-		}
-			.flex-item a:hover {
-				color: #000;
-				font-weight: 500;
+			.txt-shuffle a:hover {
+				color: #3964EA;
 			}
 
 		.footer {
-			margin-top: 100px;
+			margin-top: 120px;
 			margin-bottom: 200px;
 
 			font-size: 12px;
@@ -167,44 +145,42 @@
 		<img src="roach-logo.png">
 	</div>
 
-	<div class="title" id="title">We build and invest in internet, software, and technology-enabled businesses.</div>
-	<div class="contact txt-shuffle">
-		<a href="https://twitter.com/roachcap" target="_blank" id="@RoachCap">@RoachCap</a>
+	<div class="section-title">ROACH CAPITAL</div>
+	<div class="section-text heading">We build and invest in internet, software, and technology-enabled businesses.</div>
+	
+	<div class="section-title">INVESTMENTS</div>
+	<div class="section-text investments">
+		<span class="txt-shuffle"><a id="Ada" href="https://ada.cx/" target="_blank">Ada</a></span>, 
+		<span class="txt-shuffle"><a id="Adaptive" href="https://adaptive.build/" target="_blank">Adaptive</a></span>, 
+		<span class="txt-shuffle"><a id="August" href="https://www.youtube.com/@august_build" target="_blank">August</a></span>, 
+		<!-- <span class="txt-shuffle"><a id="Basestation" href="https://www.thebasestation.com/" target="_blank">Basestation</a></span>,  -->
+		<span class="txt-shuffle"><a id="Bench IQ" href="https://benchiq.com/" target="_blank">Bench IQ</a></span>, 
+		<span class="txt-shuffle"><a id="Berachain" href="https://berachain.com/" target="_blank">Berachain</a></span>, 
+		<span class="txt-shuffle"><a id="Carry" href="https://carrymoney.com/" target="_blank">Carry</a></span>, 
+		<span class="txt-shuffle"><a id="ConvertKit" href="https://convertkit.com/" target="_blank">ConvertKit</a></span>, 
+		<span class="txt-shuffle"><a id="Float" href="https://floatcard.com/" target="_blank">Float</a></span>, 
+		<!-- <span class="txt-shuffle"><a id="Hotplate" href="https://www.hotplate.com/" target="_blank">Hotplate</a></span>,  -->
+		<span class="txt-shuffle"><a id="Italic" href="https://italic.com/" target="_blank">Italic</a></span>, 
+		<span class="txt-shuffle"><a id="Levels.fyi" href="https://www.levels.fyi/" target="_blank">Levels.fyi</a></span>, 
+		<span class="txt-shuffle"><a id="Mantle" href="https://withmantle.com/" target="_blank">Mantle</a></span>, 
+		<!-- <span class="txt-shuffle"><a id="Metaplane" href="https://www.metaplane.dev/" target="_blank">Metaplane</a></span>, -->
+		<span class="txt-shuffle"><a id="NexHealth" href="https://www.nexhealth.com/" target="_blank">NexHealth</a></span>, 
+		<!-- <span class="txt-shuffle"><a id="Paragon" href="https://www.useparagon.com/" target="_blank">Paragon</a></span>,  -->
+		<!-- <span class="txt-shuffle"><a id="Parallel" href="https://parallel.life/" target="_blank">Parallel</a></span>,  -->
+		<!-- <span class="txt-shuffle"><a id="Parker" href="https://www.getparker.com/" target="_blank">Parker</a></span>,  -->
+		<span class="txt-shuffle"><a id="Railway" href="https://railway.app/" target="_blank">Railway</a></span>, 
+		<span class="txt-shuffle"><a id="Rainbow" href="https://rainbow.me/" target="_blank">Rainbow</a></span>, 
+		<span class="txt-shuffle"><a id="Relay" href="https://relayfi.com/" target="_blank">Relay</a></span>, 
+		<span class="txt-shuffle"><a id="Replit" href="https://replit.com/" target="_blank">Replit</a></span>, 
+		<span class="txt-shuffle"><a id="Thirdweb" href="https://thirdweb.com/" target="_blank">Thirdweb</a></span>, 
+		<span class="txt-shuffle"><a id="Wander" href="https://www.wander.com/" target="_blank">Wander</a></span>, and more.
 	</div>
 
-	<div class="flex-border"></div>
-	<div class="flex-wrapper">
-		<div class="flex-item txt-shuffle"><a id="ADA" href="https://www.ada.cx/" target="_blank">ADA</a></div>
-		<div class="flex-item txt-shuffle"><a id="ADAPTIVE" href="https://www.adaptive.build/" target="_blank">ADAPTIVE</a></div>
-		<div class="flex-item txt-shuffle"><a id="BASESTATION" href="https://www.thebasestation.com/" target="_blank">BASESTATION</a></div>
-		<div class="flex-item txt-shuffle"><a id="BENCH IQ" href="https://benchiq.com/" target="_blank">BENCH IQ</a></div>
-		<div class="flex-item txt-shuffle"><a id="BERACHAIN" href="https://berachain.com/" target="_blank">BERACHAIN</a></div>
-		<div class="flex-item txt-shuffle"><a id="CALICO" href="https://www.joincalico.com/" target="_blank">CALICO</a></div>
-		<div class="flex-item txt-shuffle"><a id="CARRY" href="https://carrymoney.com/" target="_blank">CARRY</a></div>
-		<div class="flex-item txt-shuffle"><a id="CONVERTKIT" href="https://convertkit.com/" target="_blank">CONVERTKIT</a></div>
-		<div class="flex-item txt-shuffle"><a id="CONVICTIONAL" href="https://www.convictional.com/" target="_blank">CONVICTIONAL</a></div>
-		<div class="flex-item txt-shuffle"><a id="FLOAT" href="https://floatcard.com/" target="_blank">FLOAT</a></div>
-		<div class="flex-item txt-shuffle"><a id="FUTURELAND" href="https://futureland.tv/" target="_blank">FUTURELAND</a></div>
-		<div class="flex-item txt-shuffle"><a id="HOTPLATE" href="https://www.hotplate.com/" target="_blank">HOTPLATE</a></div>
-		<div class="flex-item txt-shuffle"><a id="ITALIC" href="https://italic.com/" target="_blank">ITALIC</a></div>
-		<div class="flex-item txt-shuffle"><a id="LEVELS.FYI" href="https://www.levels.fyi/" target="_blank">LEVELS.FYI</a></div>
-		<div class="flex-item txt-shuffle"><a id="MANTLE" href="https://withmantle.com/" target="_blank">MANTLE</a></div>
-		<div class="flex-item txt-shuffle"><a id="MAXIMUS" href="https://www.maximustribe.com/" target="_blank">MAXIMUS</a></div>
-		<div class="flex-item txt-shuffle"><a id="METAPLANE" href="https://www.metaplane.dev/" target="_blank">METAPLANE</a></div>
-		<div class="flex-item txt-shuffle"><a id="MULTIVERSE" href="https://multiverse.com/" target="_blank">MULTIVERSE</a></div>
-		<div class="flex-item txt-shuffle"><a id="NEXHEALTH" href="https://www.nexhealth.com/" target="_blank">NEXHEALTH</a></div>
-		<div class="flex-item txt-shuffle"><a id="OPSLEVEL" href="https://www.opslevel.com/" target="_blank">OPSLEVEL</a></div>
-		<div class="flex-item txt-shuffle"><a id="PARAGON" href="https://www.useparagon.com/" target="_blank">PARAGON</a></div>
-		<div class="flex-item txt-shuffle"><a id="PARALLEL" href="https://parallel.life/" target="_blank">PARALLEL</a></div>
-		<div class="flex-item txt-shuffle"><a id="PARKER" href="https://www.getparker.com/" target="_blank">PARKER</a></div>
-		<div class="flex-item txt-shuffle"><a id="RAILWAY" href="https://railway.app/" target="_blank">RAILWAY</a></div>
-		<div class="flex-item txt-shuffle"><a id="RAINBOW" href="https://rainbow.me/" target="_blank">RAINBOW</a></div>
-		<div class="flex-item txt-shuffle"><a id="RELAY" href="https://relayfi.com/" target="_blank">RELAY</a></div>
-		<div class="flex-item txt-shuffle"><a id="REPLIT" href="https://replit.com/" target="_blank">REPLIT</a></div>
-		<div class="flex-item txt-shuffle"><a id="THIRDWEB" href="https://thirdweb.com/" target="_blank">THIRDWEB</a></div>
-		<div class="flex-item txt-shuffle"><a id="WANDER" href="https://www.wander.com/" target="_blank">WANDER</a></div>
-		<div class="flex-item txt-shuffle"><a id="WELBI" href="https://www.welbi.co/" target="_blank">WELBI</a></div>
-	</div>
+	<!-- <div class="section-title">PERFORMANCE</div>
+	<div class="section-text">We build and invest in internet, software, and technology-enabled businesses.</div>
+
+	<div class="section-title">EXPERIMENTS</div>
+	<div class="section-text">We build and invest in internet, software, and technology-enabled businesses.</div> -->
 
 	<div class="footer">ROACH CAPITAL MANAGEMENT INC.</div>
 
