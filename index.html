@@ -32,7 +32,7 @@
 
 	<style type="text/css">
 		html {
-			background: #E9E9E9;
+			background: #FDFDFC;
 		}
 
 		::selection {
@@ -45,8 +45,8 @@
 		a {
 			text-decoration: none;
 			cursor: inherit;
-			border-bottom: 0.5px solid;
-			transition: color 0.3s ease;
+			border-bottom: 1px solid;
+			transition: color 0.2s ease;
 		}
 		a:link, a:visited, a:active { color: inherit; }
 		a:hover {
@@ -69,7 +69,7 @@
 		  background: #0000EB;
 		  opacity: 0.9;
 		  border-radius: 1000px;
-		  transition: ease-out height 0.3s, linear width 0.3s;
+		  transition: ease-out height 0.2s, linear width 0.2s;
 		}
 
 		.hover-link {
@@ -79,7 +79,7 @@
 
 		body {
 			font-family: 'Reddit Mono', monospace;
-			font-size: 14px;
+			font-size: 15px;
 			max-width: 400px;
 			margin: auto;
 			margin-bottom: 250px;
@@ -89,7 +89,7 @@
 
 		.logo-wrapper {
 			margin: auto;
-			margin-top: 50px;
+			margin-top: 80px;
 			margin-bottom: 100px;
 			width: min-content;
 		}
@@ -97,21 +97,22 @@
 				height: 60px;
 			}
 
-		.section-title {
-			font-size: 12px;
+		.section-title, .section-title-inline {
+			font-size: 13px;
 			font-weight: 600;
 			text-transform: uppercase;
 			letter-spacing: 0.5px;
 			text-align: left;
 			margin-bottom: 10px;
 		}
+			.section-title-inline {
+				margin: 0;
+			}
 		.section-text {
 			margin-bottom: 50px;
-			max-width: 400px;
 
-			line-height: 28px;
+			line-height: 32px;
 			text-align: left;
-			font-weight: 350;
 		}
 			.section-text.headline {
 				margin-bottom: 100px;
@@ -133,8 +134,9 @@
 		<img src="roach-logo.png">
 	</div>
 
-	<div class="section-title">ROACH CAPITAL</div>
-	<div class="section-text headline">We build and invest in internet, software, and technology-enabled companies.</div>
+	
+	<!-- <div class="section-title">ROACH CAPITAL</div> -->
+	<div class="section-text headline"><span class="section-title-inline">ROACH CAPITAL</span> builds and invests in internet, software, and technology-enabled companies.</div>
 	
 	<div class="section-title">INVESTMENTS</div>
 	<div class="section-text investments">
