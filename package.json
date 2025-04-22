@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "canvas-sketch-util": "^1.10.0",
-    "eases": "^1.0.8",
-    "txt-shuffle": "^1.0.3"
-  }
-}
