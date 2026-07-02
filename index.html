@@ -1,138 +1,249 @@
-<!-- HTML Meta Tags -->
-<title>Roach Capital</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Roach Capital builds and invests in internet, software, and technology-enabled companies.">
-
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://roachcap.com">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Roach Capital">
-<meta property="og:description" content="Roach Capital builds and invests in internet, software, and technology-enabled companies.">
-<meta property="og:image" content="https://roachcap.com/roach-meta-img.png">
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="roachcap.com">
-<meta property="twitter:url" content="https://roachcap.com">
-<meta name="twitter:title" content="Roach Capital">
-<meta name="twitter:description" content="Roach Capital builds and invests in internet, software, and technology-enabled companies.">
-<meta name="twitter:image" content="https://roachcap.com/roach-meta-img.png">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+
+	<!-- HTML Meta Tags -->
+	<title>Roach Capital</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Roach Capital builds and invests in internet, software, and technology-enabled companies.">
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://roachcap.com">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Roach Capital">
+	<meta property="og:description" content="Roach Capital builds and invests in internet, software, and technology-enabled companies.">
+	<meta property="og:image" content="https://roachcap.com/roach-meta-img.png">
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="roachcap.com">
+	<meta property="twitter:url" content="https://roachcap.com">
+	<meta name="twitter:title" content="Roach Capital">
+	<meta name="twitter:description" content="Roach Capital builds and invests in internet, software, and technology-enabled companies.">
+	<meta name="twitter:image" content="https://roachcap.com/roach-meta-img.png">
+
 	<!-- FAVICON -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-	<!-- FONT -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-	
-	
-	<style type="text/css">
-		html {
-			background: #FFF;
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
 		}
 
-		::selection {
-			background: rgb(80, 80, 80, 0.1);
+		:root {
+			--page-background: #fdfdfc;
+			--secondary: #77766F;
+			--primary: #26251E;
+			--hover-bg: #f5f4f4;
+			--link-underline: #E5E7E7;
+			--hover-accent: #F64E00;
 		}
-		::-moz-selection {
-			background: rgb(80, 80, 80, 0.1);
+
+		html {
+			background: var(--page-background);
+		}
+
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			font-size: 15px;
+			line-height: 24px;
+			font-weight: 400;
+			color: var(--primary);
+			background: var(--page-background);
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
 		}
 
 		a {
 			text-decoration: none;
-			border-bottom: 1.5px solid #E5E7E7;
+			border-bottom: 1.5px solid var(--link-underline);
+			transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		}
-		a:link, a:visited, a:active { color: inherit; }
+
+		a:link,
+		a:visited,
+		a:active {
+			color: var(--secondary);
+		}
+
 		a:hover {
-			color: #6E53F6;
-			border-bottom: 1.5px solid #6E53F6;
-			transition: color 0.5s ease;
-			transition: border-bottom-color 0.5s ease;
-			
+			color: var(--hover-accent);
+			border-bottom-color: var(--hover-accent);
 		}
 
-		body {
-			font-family: 'Instrument Sans', sans-serif;
-			font-optical-sizing: auto;
-			font-weight: 400;
-			font-size: 16px;
-			color: #000;
-
-			text-align: left;
-			line-height: 32px;
-			max-width: 400px;
-			margin: auto;
-			margin-bottom: 250px;
+		.layout {
+			max-width: 692px;
+			margin: 0 auto;
+			padding: 48px 24px;
 		}
 
-		.logo-wrapper {
-			margin: 120px auto;
-			margin-bottom: 80px;
-			width: min-content;
-		}
-			.logo-wrapper img {
-				height: 26px;
+		@media (min-width: 640px) {
+			.layout {
+				padding-top: 128px;
+				padding-bottom: 128px;
 			}
-
-		.section-text {
-			margin-bottom: 50px;
 		}
-			.section-text.top-border {
-				border-top: 1px solid #E5E7E7;
-				padding-top: 25px;
+
+		@media (min-width: 768px) {
+			.layout {
+				padding-top: 64px;
+				padding-bottom: 64px;
 			}
-		.section-title {
+		}
+
+		header {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 128px;
+		}
+
+		.name {
+			display: inline-block;
 			font-weight: 500;
+			color: var(--primary);
 		}
 
-		@media (max-width: 750px) {
-			body { width: 85%; }
+		.subtitle {
+			font-weight: 500;
+			line-height: 1;
+			color: var(--secondary);
 		}
+
+		.muted {
+			color: var(--secondary);
+		}
+
+		main p + p {
+			margin-top: 16px;
+		}
+
+		.section {
+			margin-top: 32px;
+		}
+
+		@media (min-width: 640px) {
+			.section {
+				margin-top: 64px;
+			}
+		}
+
+		.section-label {
+			display: block;
+			font-weight: 500;
+			color: var(--primary);
+			margin-bottom: 20px;
+		}
+
+		@media (min-width: 640px) {
+			.section-label {
+				margin-bottom: 16px;
+			}
+		}
+
+		.list {
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+		}
+
+		.list-item {
+			display: flex;
+			flex-direction: column;
+			margin: 0 -12px;
+			padding: 8px 12px;
+			border-bottom: none;
+			border-radius: 6px;
+			color: var(--primary);
+			transition: background-color 0.2s ease;
+		}
+
+		.list-item:hover {
+			background: var(--hover-bg);
+		}
+
+		.list-item-description {
+			color: var(--secondary);
+		}
+
+		.list-item-title {
+			color: var(--primary);
+			transition: color 0.2s ease;
+		}
+
+		.list-item:hover .list-item-title {
+			color: var(--hover-accent);
+		}
+
 	</style>
 </head>
-
 <body>
-	<div id="cursor"></div>
+	<div class="layout">
+		<header>
+			<span class="name">Fahd Ananta</span>
+			<span class="subtitle">Builder &amp; Investor</span>
+		</header>
 
-	<div class="logo-wrapper">
-		<img src="roach-logo.png">
+		<main>
+			<span class="section-label">Opendoor</span>
+			<p class="muted">I work at <a href="https://www.opendoor.com/" target="_blank">Opendoor</a>, building products that make buying, selling, and owning a home simpler. We are rebuilding the company to tilt the world in favor of homeowners.</p>
+
+			<div class="section">
+				<span class="section-label">Roach Capital</span>
+				<p class="muted"><a href="https://x.com/roachcap" target="_blank">Roach Capital</a> builds and invests in internet, software, and technology-enabled companies. We have invested in 60+ companies including
+					<a href="https://ada.cx/" target="_blank">Ada</a>,
+					<a href="https://adaptive.build/" target="_blank">Adaptive</a>,
+					<a href="https://carry.com/" target="_blank">Carry</a>,
+					<a href="https://www.nexhealth.com/" target="_blank">NexHealth</a>,
+					<a href="https://railway.app/" target="_blank">Railway</a>,
+					<a href="https://replit.com/" target="_blank">Replit</a>,
+					<a href="https://www.wander.com/" target="_blank">Wander</a>,
+					<a href="https://thewellness.company" target="_blank">The Wellness Company</a>, and more.</p>
+			</div>
+
+			<div class="section">
+				<span class="section-label">Memos</span>
+				<div class="list">
+					<a class="list-item" href="https://x.com/fahdananta/status/2027226356241531040" target="_blank">
+						<span class="list-item-title">Secrets of the Best PMs</span>
+						<span class="list-item-description">Feb 26, 2026</span>
+					</a>
+					<a class="list-item" href="https://x.com/fahdananta/status/2028472761123762221" target="_blank">
+						<span class="list-item-title">Minimalist Portfolio</span>
+						<span class="list-item-description">Aug 6, 2025</span>
+					</a>
+					<a class="list-item" href="https://x.com/fahdananta/status/2028176084940804565" target="_blank">
+						<span class="list-item-title">The Price of Progress</span>
+						<span class="list-item-description">Aug 5, 2025</span>
+					</a>
+					<a class="list-item" href="https://x.com/fahdananta/status/2028104194998091907" target="_blank">
+						<span class="list-item-title">The Advisor Paradox</span>
+						<span class="list-item-description">Aug 4, 2025</span>
+					</a>
+					<a class="list-item" href="https://x.com/fahdananta/status/2027813632638107729" target="_blank">
+						<span class="list-item-title">Death by Venture Capital</span>
+						<span class="list-item-description">Aug 2, 2025</span>
+					</a>
+					<a class="list-item" href="https://x.com/fahdananta/status/2027749668646506889" target="_blank">
+						<span class="list-item-title">Volatility</span>
+						<span class="list-item-description">Aug 1, 2025</span>
+					</a>
+					<a class="list-item" href="https://x.com/fahdananta/status/2027615623669317923" target="_blank">
+						<span class="list-item-title">Noise</span>
+						<span class="list-item-description">Jul 31, 2025</span>
+					</a>
+				</div>
+			</div>
+		</main>
 	</div>
-
-	<div class="section-text"><a href="https://x.com/roachcap" target="_blank">Roach Capital</a> builds and invests in internet, software, and technology-enabled companies.</div>
-	
-	<div class="section-text">
-		We have invested in 60+ companies including 
-		<span><a href="https://ada.cx/" target="_blank">Ada</a></span>, 
-		<span><a href="https://adaptive.build/" target="_blank">Adaptive</a></span>, 
-		<!-- <span><a href="https://benchiq.com/" target="_blank">Bench IQ</a></span>,  -->
-		<span><a href="https://carry.com/" target="_blank">Carry</a></span>, 
-		<!-- <span><a href="https://kit.com/" target="_blank">Kit</a></span>,  -->
-		<!-- <span><a href="https://withmantle.com/" target="_blank">Mantle</a></span>,  -->
-		<span><a href="https://www.nexhealth.com/" target="_blank">NexHealth</a></span>, 
-		<span><a href="https://railway.app/" target="_blank">Railway</a></span>, 
-		<span><a href="https://replit.com/" target="_blank">Replit</a></span>, 
-		<span><a href="https://www.wander.com/" target="_blank">Wander</a></span>, 
-		<span><a href="https://thewellness.company" target="_blank">The Wellness Company</a></span>, and more.
-	</div>
-
-	<div class="section-text">
-		We also build tools and run experiments like <span><a href="https://twitter.com/535TORONTO" target="_blank">Studio 535</a></span>.
-	</div>
-
-	<div class="section-text top-border">
-		<div class="section-title">Memos</div>
-		<ul style="margin-top: 10px;">
-			<li><a href="https://docs.google.com/document/d/1ONcq2cuva8Lu7YjLPDfm6hsxR75LMmv8hheoPwafcPI/edit?usp=sharing" target="_blank">Noise</a></li>
-			<li><a href="https://docs.google.com/document/d/1a9M0ePp2bEVGWvzjH2N1LaSSH6BL9g0cQMS4WO5WQu4/edit?usp=sharing" target="_blank">Volatility</a></li>
-			<li><a href="https://docs.google.com/document/d/1S79uWpYrE5CJejpv9P6Ph5nVjcO6i4YJEjaEFJBJzz0/edit?usp=sharing" target="_blank">Death By Venture Capital</a></li>
-			<li><a href="https://docs.google.com/document/d/1paqnV0IY2p4jbcKQ991gCORAyiwYhxjerFMNYzyS1m8/edit?usp=sharing" target="_blank">The Advisor Paradox</a></li>
-			<li><a href="https://docs.google.com/document/d/1r9eEDP2jPflHXt1dbUKfM3p_zRzHx3jjIilVUWl3T6I/edit?usp=sharing" target="_blank">The Price of Progress</a></li>
-			<li><a href="https://docs.google.com/document/d/1zX9kpYVzbPspfn4HZhaUQlYcM7WZPrPEq2MmJyYYV_s/edit?usp=sharing" target="_blank">Minimalist Portfolio</a></li>
-		</ul>
-	</div>
-
 </body>
+</html>
