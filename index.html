@@ -41,11 +41,19 @@
 
 		:root {
 			--page-background: #fdfdfc;
-			--secondary: #77766F;
+			--secondary: #63635E;
 			--primary: #26251E;
-			--hover-bg: #f5f4f4;
-			--link-underline: #E5E7E7;
+			--hover-bg: #F5F4F4;
+			--highlight: #E5E7E7;
 			--hover-accent: #F64E00;
+		}
+
+		::selection {
+			background: var(--highlight);
+		}
+
+		::-moz-selection {
+			background: var(--highlight);
 		}
 
 		html {
@@ -65,7 +73,7 @@
 
 		a {
 			text-decoration: none;
-			border-bottom: 1.5px solid var(--link-underline);
+			border-bottom: 1.5px solid var(--highlight);
 			transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		}
 
@@ -190,7 +198,7 @@
 	<div class="layout">
 		<header>
 			<span class="name">Fahd Ananta</span>
-			<span class="subtitle">Builder &amp; Investor</span>
+			<span class="subtitle">Toronto, Canada</span>
 		</header>
 
 		<main>
@@ -199,45 +207,43 @@
 
 			<div class="section">
 				<span class="section-label">Roach Capital</span>
-				<p class="muted"><a href="https://x.com/roachcap" target="_blank">Roach Capital</a> builds and invests in internet, software, and technology-enabled companies. We have invested in 60+ companies including
+				<p class="muted">Roach Capital builds and invests in internet, software, and technology-enabled companies. The fund has invested in 60+ companies including
 					<a href="https://ada.cx/" target="_blank">Ada</a>,
-					<a href="https://adaptive.build/" target="_blank">Adaptive</a>,
-					<a href="https://carry.com/" target="_blank">Carry</a>,
 					<a href="https://www.nexhealth.com/" target="_blank">NexHealth</a>,
 					<a href="https://railway.app/" target="_blank">Railway</a>,
 					<a href="https://replit.com/" target="_blank">Replit</a>,
 					<a href="https://www.wander.com/" target="_blank">Wander</a>,
-					<a href="https://thewellness.company" target="_blank">The Wellness Company</a>, and more.</p>
+					and more.</p>
 			</div>
 
 			<div class="section">
 				<span class="section-label">Memos</span>
 				<div class="list">
-					<a class="list-item" href="https://x.com/fahdananta/status/2027226356241531040" target="_blank">
+					<a class="list-item" href="memos/secrets-of-the-best-pms.html">
 						<span class="list-item-title">Secrets of the Best PMs</span>
 						<span class="list-item-description">Feb 26, 2026</span>
 					</a>
-					<a class="list-item" href="https://x.com/fahdananta/status/2028472761123762221" target="_blank">
+					<a class="list-item" href="memos/minimalist-portfolio.html">
 						<span class="list-item-title">Minimalist Portfolio</span>
 						<span class="list-item-description">Aug 6, 2025</span>
 					</a>
-					<a class="list-item" href="https://x.com/fahdananta/status/2028176084940804565" target="_blank">
+					<a class="list-item" href="memos/the-price-of-progress.html">
 						<span class="list-item-title">The Price of Progress</span>
 						<span class="list-item-description">Aug 5, 2025</span>
 					</a>
-					<a class="list-item" href="https://x.com/fahdananta/status/2028104194998091907" target="_blank">
+					<a class="list-item" href="memos/the-advisor-paradox.html">
 						<span class="list-item-title">The Advisor Paradox</span>
 						<span class="list-item-description">Aug 4, 2025</span>
 					</a>
-					<a class="list-item" href="https://x.com/fahdananta/status/2027813632638107729" target="_blank">
+					<a class="list-item" href="memos/death-by-venture-capital.html">
 						<span class="list-item-title">Death by Venture Capital</span>
 						<span class="list-item-description">Aug 2, 2025</span>
 					</a>
-					<a class="list-item" href="https://x.com/fahdananta/status/2027749668646506889" target="_blank">
+					<a class="list-item" href="memos/volatility.html">
 						<span class="list-item-title">Volatility</span>
 						<span class="list-item-description">Aug 1, 2025</span>
 					</a>
-					<a class="list-item" href="https://x.com/fahdananta/status/2027615623669317923" target="_blank">
+					<a class="list-item" href="memos/noise.html">
 						<span class="list-item-title">Noise</span>
 						<span class="list-item-description">Jul 31, 2025</span>
 					</a>
