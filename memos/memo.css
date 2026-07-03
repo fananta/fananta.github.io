@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--page-background: #fdfdfc;
+	--secondary: #63635E;
+	--primary: #26251E;
+	--highlight: #E5E7E7;
+	--hover-accent: #F64E00;
+}
+
+::selection {
+	background: var(--highlight);
+}
+
+::-moz-selection {
+	background: var(--highlight);
+}
+
+html {
+	background: var(--page-background);
+}
+
+body {
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-size: 15px;
+	line-height: 24px;
+	font-weight: 400;
+	color: var(--primary);
+	background: var(--page-background);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: var(--secondary);
+	text-decoration: none;
+	border-bottom: 1.5px solid var(--highlight);
+	transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+a:hover {
+	color: var(--hover-accent);
+	border-bottom-color: var(--hover-accent);
+}
+
+.article {
+	max-width: 692px;
+	margin: 0 auto;
+	padding: 48px 24px;
+}
+
+.breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 48px;
+	color: var(--secondary);
+}
+
+.article-header {
+	margin-bottom: 64px;
+}
+
+.article-date {
+	margin-top: 4px;
+	color: var(--secondary);
+}
+
+h1 {
+	font-size: 22.5px;
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	color: var(--primary);
+}
+
+.article-image {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-bottom: 32px;
+	border-radius: 8px;
+}
+
+.article-body {
+	color: var(--secondary);
+}
+
+.article-body p + p {
+	margin-top: 24px;
+}
+
+.article-body h2 {
+	margin-top: 32px;
+	margin-bottom: 8px;
+	font-size: 15px;
+	line-height: 24px;
+	font-weight: 500;
+	color: var(--primary);
+}
+
+.article-content-image {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-top: 24px;
+}
+
+.article-body ol {
+	margin-top: 24px;
+	padding-left: 22px;
+}
+
+.article-body strong {
+	font-weight: 500;
+	color: var(--primary);
+}
+
+.article-body li + li,
+.article-body ol + p {
+	margin-top: 24px;
+}
+
+@media (min-width: 640px) {
+	.article {
+		padding-top: 128px;
+		padding-bottom: 128px;
+	}
+}
+
+@media (min-width: 768px) {
+	.article {
+		padding-top: 64px;
+		padding-bottom: 64px;
+	}
+}
+
+@media (max-width: 639px) {
+	.breadcrumbs {
+		margin-bottom: 32px;
+	}
+
+	.article-header {
+		margin-bottom: 32px;
+	}
+
+	.article-image {
+		margin-bottom: 40px;
+		border-radius: 6px;
+	}
+}
