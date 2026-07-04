@@ -82,7 +82,7 @@ h1 {
 	width: 100%;
 	height: auto;
 	margin-bottom: 32px;
-	border-radius: 8px;
+	border-radius: 4px;
 }
 
 .article-body {
@@ -149,6 +149,6 @@ h1 {
 
 	.article-image {
 		margin-bottom: 40px;
-		border-radius: 6px;
+		border-radius: 4px;
 	}
 }
