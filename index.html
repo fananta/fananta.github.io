@@ -192,6 +192,134 @@
 			color: var(--hover-accent);
 		}
 
+		.investments-scroll {
+			overflow-x: auto;
+			margin: 0 -12px;
+		}
+
+		.investments-table {
+			width: 100%;
+			min-width: 440px;
+			border-collapse: separate;
+			border-spacing: 0;
+			text-align: left;
+			font: inherit;
+			font-size: 13px;
+			color: var(--secondary);
+			cursor: default;
+		}
+
+		.investments-table th,
+		.investments-table td {
+			padding: 8px 12px;
+			white-space: nowrap;
+		}
+
+		.investments-table tbody th:first-child,
+		.investments-table tbody td:first-child {
+			border-radius: 6px 0 0 6px;
+		}
+
+		.investments-table th:nth-child(n + 3),
+		.investments-table td:nth-child(n + 3) {
+			width: 1%;
+			text-align: right;
+		}
+
+		.investments-table th:nth-child(3),
+		.investments-table td:nth-child(3) {
+			text-align: left;
+		}
+
+		.investments-table th:nth-child(n + 4),
+		.investments-table td:nth-child(n + 4) {
+			padding-left: 24px;
+		}
+
+		.investments-table th:first-child,
+		.investments-table td:first-child {
+			width: 1%;
+		}
+
+		.investments-table tbody th:last-child,
+		.investments-table tbody td:last-child {
+			border-radius: 0 6px 6px 0;
+		}
+
+		.investments-table thead th {
+			font-weight: 500;
+			padding-bottom: 4px;
+			border-bottom: 1px solid var(--highlight);
+		}
+
+		.investments-table thead button {
+			border: 0;
+			background: none;
+			color: inherit;
+			font: inherit;
+			cursor: pointer;
+			transition: color 0.2s ease;
+		}
+
+		.investments-table thead button:hover,
+		.investments-table thead button:focus-visible {
+			color: var(--hover-accent);
+		}
+
+		.investments-table thead th[aria-sort="ascending"] button::after {
+			content: " ↑";
+		}
+
+		.investments-table thead th[aria-sort="descending"] button::after {
+			content: " ↓";
+		}
+
+		.investments-table thead th:first-child button::after {
+			content: none;
+		}
+
+		.investments-table tbody::before {
+			content: "";
+			display: table-row;
+			height: 8px;
+		}
+
+		.investments-table tbody th {
+			font-weight: 400;
+			color: var(--primary);
+			transition: color 0.2s ease;
+		}
+
+		.investments-table tbody td,
+		.investments-table tbody th {
+			padding-top: 6px;
+			padding-bottom: 6px;
+			transition: background-color 0.2s ease;
+		}
+
+		.investments-table tbody tr:hover td,
+		.investments-table tbody tr:hover th {
+			background: var(--hover-bg);
+		}
+
+		.investments-table tbody td:has(a[href]),
+		.investments-table tbody th {
+			transition: color 0.2s ease, background-color 0.2s ease;
+		}
+
+		.investments-table a {
+			color: inherit;
+			border-bottom: none;
+			text-decoration: none;
+			cursor: pointer;
+			transition: none;
+		}
+
+		.investments-table tbody tr:hover th:has(a[href]),
+		.investments-table tbody tr:hover td:has(a[href]) {
+			color: var(--hover-accent);
+		}
+
 	</style>
 </head>
 <body>
@@ -203,11 +331,11 @@
 
 		<main>
 			<span class="section-label">Opendoor</span>
-			<p class="muted">I work at <a href="https://www.opendoor.com/" target="_blank">Opendoor</a>, building products that make buying, selling, and owning a home simpler. We are rebuilding the company to tilt the world in favor of homeowners.</p>
+			<p class="muted">I work at <a href="https://www.opendoor.com/" target="_blank">Opendoor</a>, building products that make buying, selling, and owning a home simpler. We are rebuilding the company.</p>
 
 			<div class="section">
 				<span class="section-label">Roach Capital</span>
-				<p class="muted">Roach Capital builds and invests in internet, software, and technology-enabled companies. The fund has invested in 60+ companies including
+				<p class="muted">Roach Capital builds and invests in internet, software, and technology-enabled companies. The fund has invested in 50+ companies including
 					<a href="https://ada.cx/" target="_blank">Ada</a>,
 					<a href="https://replit.com/" target="_blank">Replit</a>,
 					<a href="https://www.wander.com/" target="_blank">Wander</a>,
@@ -247,7 +375,90 @@
 					</a>
 				</div>
 			</div>
+			<section class="section" aria-labelledby="investments-heading">
+				<h2 class="section-label" id="investments-heading" style="font-size: inherit;">Investments</h2>
+				<div class="investments-scroll" role="region" aria-label="Investments table" tabindex="0">
+					<table class="investments-table">
+						<thead>
+							<tr><th scope="col" aria-sort="descending"><button type="button">Year</button></th><th scope="col"><button type="button">Company</button></th><th scope="col"><button type="button">Stage</button></th><th scope="col"><button type="button">Status</button></th></tr>
+						</thead>
+						<tbody>
+							<tr><td><time datetime="2025-06" title="June 2025">2025</time></td><th scope="row"><a href="https://smartarm.ca" target="_blank" rel="noopener noreferrer">SmartARM Robotics</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2025-06" title="June 2025">2025</time></td><th scope="row"><a href="https://niahealth.co" target="_blank" rel="noopener noreferrer">NiaHealth</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2025-06" title="June 2025">2025</time></td><th scope="row"><a href="https://protector.so" target="_blank" rel="noopener noreferrer">Protector</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2025-05" title="May 2025">2025</time></td><th scope="row"><a href="https://shareaura.app" target="_blank" rel="noopener noreferrer">Aura</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2025-03" title="March 2025">2025</time></td><th scope="row"><a href="https://oncontinuum.com" target="_blank" rel="noopener noreferrer">Continuum</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2024-07" title="July 2024">2024</time></td><th scope="row"><a href="https://thewellness.company" target="_blank" rel="noopener noreferrer">The Wellness Company</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2024-04" title="April 2024">2024</time></td><th scope="row"><a href="https://hotplate.com" target="_blank" rel="noopener noreferrer">Hotplate</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2023-08" title="August 2023">2023</time></td><th scope="row"><a href="https://benchiq.com" target="_blank" rel="noopener noreferrer">Bench IQ</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2023-07" title="July 2023">2023</time></td><th scope="row"><a href="https://withmantle.com" target="_blank" rel="noopener noreferrer">Mantle</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2022-10" title="October 2022">2022</time></td><th scope="row"><a href="https://carry.com" target="_blank" rel="noopener noreferrer">Carry</a></th><td>Seed</td><td><a href="https://www.forbes.com/sites/elainepofeldt/2026/04/15/teachable-founder-ankur-nagpals-retirement-and-investing-platform-carry-is-acquired/" target="_blank" rel="noopener noreferrer">Acquired by AngelList</a></td></tr>
+							<tr><td><time datetime="2022-07" title="July 2022">2022</time></td><th scope="row"><a href="https://railway.app" target="_blank" rel="noopener noreferrer">Railway</a></th><td>Series A</td><td>Active</td></tr>
+							<tr><td><time datetime="2022-04" title="April 2022">2022</time></td><th scope="row"><a href="https://adaptive.build" target="_blank" rel="noopener noreferrer">Adaptive</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2022-03-04" title="March 4, 2022">2022</time></td><th scope="row"><a href="https://wander.com" target="_blank" rel="noopener noreferrer">Wander</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2022-03" title="March 2022">2022</time></td><th scope="row"><a href="https://welbi.co" target="_blank" rel="noopener noreferrer">Welbi</a></th><td>Seed</td><td><a href="https://www.newswire.ca/news-releases/further-acquires-welbi-to-unite-sales-amp-marketing-and-resident-experience-with-ai-816399443.html" target="_blank" rel="noopener noreferrer">Acquired by Further</a></td></tr>
+							<tr><td><time datetime="2022-01-28" title="January 28, 2022">2022</time></td><th scope="row"><a href="https://railway.com" target="_blank" rel="noopener noreferrer">Railway</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2021-12-29" title="December 29, 2021">2021</time></td><th scope="row"><a href="https://opslevel.com" target="_blank" rel="noopener noreferrer">Opslevel</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2021-11" title="November 2021">2021</time></td><th scope="row"><a href="https://thebasestation.com" target="_blank" rel="noopener noreferrer">Basestation</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2021-11" title="November 2021">2021</time></td><th scope="row"><a href="https://thirdweb.com" target="_blank" rel="noopener noreferrer">Thirdweb</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2021-11" title="November 2021">2021</time></td><th scope="row"><a href="https://parallel.life" target="_blank" rel="noopener noreferrer">Parallel</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2021-10" title="October 2021">2021</time></td><th scope="row"><a href="https://floatcard.com" target="_blank" rel="noopener noreferrer">Float</a></th><td>Series A</td><td>Active</td></tr>
+							<tr><td><time datetime="2021-09-13" title="September 13, 2021">2021</time></td><th scope="row"><a href="https://kit.com" target="_blank" rel="noopener noreferrer">Kit (fka ConvertKit)</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2021-09" title="September 2021">2021</time></td><th scope="row"><a href="https://levels.fyi" target="_blank" rel="noopener noreferrer">Levels.fyi</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2021-08" title="August 2021">2021</time></td><th scope="row"><a href="https://medium.com/flexa/flexa-to-acquire-drop-party-to-deliver-custom-marketing-experiences-for-merchants-6373997a79bf" target="_blank" rel="noopener noreferrer">Drop Party</a></th><td>Seed</td><td><a href="https://medium.com/flexa/flexa-to-acquire-drop-party-to-deliver-custom-marketing-experiences-for-merchants-6373997a79bf" target="_blank" rel="noopener noreferrer">Acquired by Flexa</a></td></tr>
+							<tr><td><time datetime="2021-08" title="August 2021">2021</time></td><th scope="row"><a href="https://nexhealth.com" target="_blank" rel="noopener noreferrer">NexHealth</a></th><td>Series B</td><td>Active</td></tr>
+							<tr><td><time datetime="2021-08" title="August 2021">2021</time></td><th scope="row"><a href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</a></th><td>Series B</td><td>Active</td></tr>
+							<tr><td><time datetime="2021-06-08" title="June 8, 2021">2021</time></td><th scope="row"><a href="https://rainbow.me" target="_blank" rel="noopener noreferrer">Rainbow</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2020-12-22" title="December 22, 2020">2020</time></td><th scope="row"><a href="https://italic.com" target="_blank" rel="noopener noreferrer">Italic</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2020-03-06" title="March 6, 2020">2020</time></td><th scope="row"><a href="https://bemaximus.com" target="_blank" rel="noopener noreferrer">Maximus Health</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2019-10-21" title="October 21, 2019">2019</time></td><th scope="row"><a href="https://metaplane.dev" target="_blank" rel="noopener noreferrer">Metaplane</a></th><td>Seed</td><td><a href="https://www.datadoghq.com/blog/datadog-acquires-metaplane/" target="_blank" rel="noopener noreferrer">Acquired by Datadog</a></td></tr>
+							<tr><td><time datetime="2019-10-15" title="October 15, 2019">2019</time></td><th scope="row"><a href="https://useparagon.com" target="_blank" rel="noopener noreferrer">Paragon</a></th><td>Seed</td><td>Active</td></tr>
+							<tr><td><time datetime="2019-07-02" title="July 2, 2019">2019</time></td><th scope="row"><a href="https://mayday.am" target="_blank" rel="noopener noreferrer">Mayday</a></th><td>Seed</td><td><a href="https://appleinsider.com/articles/25/05/09/apple-acquisitions-hint-at-apple-intelligence-coming-to-calendar-and-the-factory-floor" target="_blank" rel="noopener noreferrer">Acquired by Apple</a></td></tr>
+							<tr><td><time datetime="2019-02-28" title="February 28, 2019">2019</time></td><th scope="row"><a href="https://ada.support" target="_blank" rel="noopener noreferrer">Ada</a></th><td>Seed</td><td>Merged with Dialpad</td></tr>
+							<tr><td><time datetime="2019-01-28" title="January 28, 2019">2019</time></td><th scope="row"><a href="https://relayfi.com" target="_blank" rel="noopener noreferrer">Relay</a></th><td>Seed</td><td>Active</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
 		</main>
 	</div>
+	<script>
+		const investmentsTable = document.querySelector('.investments-table');
+		const investmentsBody = investmentsTable.tBodies[0];
+		const investmentHeaders = [...investmentsTable.tHead.rows[0].cells];
+		const originalRows = [...investmentsBody.rows];
+
+		investmentHeaders.forEach((header, column) => {
+			header.querySelector('button').addEventListener('click', () => {
+				const direction = header.getAttribute('aria-sort') === 'ascending' ? 'descending' : 'ascending';
+				const multiplier = direction === 'ascending' ? 1 : -1;
+				const rows = originalRows.map((row, index) => ({ row, index }));
+
+				rows.sort((a, b) => {
+					const first = a.row.cells[column].textContent.trim();
+					const second = b.row.cells[column].textContent.trim();
+					const comparison = column === 0
+						? a.row.cells[0].querySelector('time').dateTime.localeCompare(b.row.cells[0].querySelector('time').dateTime)
+						: first.localeCompare(second, undefined, { sensitivity: 'base' });
+					return comparison * multiplier || a.index - b.index;
+				});
+
+				investmentHeaders.forEach(cell => {
+					cell.removeAttribute('aria-sort');
+				});
+				header.setAttribute('aria-sort', direction);
+				investmentsBody.replaceChildren(...rows.map(({ row }) => row));
+
+				if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+					rows.forEach(({ row }, index) => {
+						row.animate(
+							[{ opacity: 0.6, transform: 'translateY(4px)' }, { opacity: 1, transform: 'translateY(0)' }],
+							{ duration: 180, delay: index * 12, easing: 'ease-out' }
+						);
+					});
+				}
+			});
+		});
+	</script>
 </body>
 </html>
