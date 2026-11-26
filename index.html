@@ -42,6 +42,7 @@
 		:root {
 			--page-background: #fdfdfc;
 			--secondary: #63635E;
+			--tertiary: #92928E;
 			--primary: #26251E;
 			--hover-bg: #F5F4F4;
 			--highlight: #E5E7E7;
@@ -320,9 +321,120 @@
 			color: var(--hover-accent);
 		}
 
+		.work-list {
+			display: grid;
+			row-gap: 16px;
+			list-style: none;
+		}
+
+		.work-item {
+			display: block;
+			font-size: 14px;
+		}
+
+		.work-details {
+			display: grid;
+			grid-template-columns: max-content minmax(0, 1fr);
+			align-items: center;
+			column-gap: 12px;
+		}
+
+		@media (max-width: 639px) {
+			.work-details {
+				grid-template-columns: 1fr;
+			}
+
+			.work-details .work-meta {
+				justify-self: start;
+				margin-left: 22px;
+				max-width: calc(100% - 22px);
+				text-align: left;
+				white-space: normal;
+			}
+		}
+
+		.work-identity {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			justify-self: start;
+			border-bottom: none;
+		}
+
+		a.work-identity:link,
+		a.work-identity:visited {
+			color: var(--primary);
+		}
+
+		.work-icon {
+			position: relative;
+			width: 14px;
+			height: 14px;
+			flex: none;
+		}
+
+		.work-logo {
+			display: block;
+			width: 14px;
+			height: 14px;
+			object-fit: contain;
+			filter: grayscale(1);
+			opacity: 0.8;
+			transition: opacity 0.2s ease;
+		}
+
+		.work-logo-accent {
+			position: absolute;
+			inset: 0;
+			filter: url(#work-logo-orange);
+			opacity: 0;
+		}
+
+		.work-identity:hover .work-logo:not(.work-logo-accent) {
+			opacity: 0;
+		}
+
+		.work-identity:hover .work-logo-accent {
+			opacity: 1;
+		}
+
+		.work-company {
+			color: var(--primary);
+			transition: color 0.2s ease;
+		}
+
+		.work-identity:hover .work-company {
+			color: var(--hover-accent);
+		}
+
+		.work-role {
+			color: var(--secondary);
+		}
+
+		.work-meta {
+			text-align: right;
+			white-space: normal;
+		}
+
+		.work-years {
+			color: var(--tertiary);
+			white-space: nowrap;
+		}
+
 	</style>
 </head>
 <body>
+	<svg aria-hidden="true" width="0" height="0" focusable="false" style="position: absolute;">
+		<defs>
+			<filter id="work-logo-orange" color-interpolation-filters="sRGB">
+				<feColorMatrix type="matrix" values="
+					0.0074 0.0250 0.0025 0 0.965
+					0.0787 0.2646 0.0267 0 0.306
+					0.1063 0.3576 0.0361 0 0
+					0 0 0 1 0"/>
+			</filter>
+		</defs>
+	</svg>
 	<div class="layout">
 		<header>
 			<span class="name">Fahd Ananta</span>
@@ -375,6 +487,22 @@
 					</a>
 				</div>
 			</div>
+
+			<section class="section" aria-labelledby="work-heading">
+				<h2 class="section-label" id="work-heading" style="font-size: inherit;">Work</h2>
+				<ul class="work-list">
+					<li class="work-item"><span class="work-details"><a class="work-identity" href="https://www.opendoor.com/" target="_blank" rel="noopener noreferrer"><span class="work-icon" aria-hidden="true"><img class="work-logo" src="assets/work/opendoor.svg" alt=""><img class="work-logo work-logo-accent" src="assets/work/opendoor.svg" alt=""></span><span class="work-company">Opendoor</span></a><span class="work-meta"><span class="work-role">Buyer Experience, Product, Design, </span><span class="work-years">2025 - Current</span></span></span></li>
+					<li class="work-item"><span class="work-details"><a class="work-identity" href="https://roachcap.com/" target="_blank" rel="noopener noreferrer"><span class="work-icon" aria-hidden="true"><img class="work-logo" src="roach-logo.png" alt=""><img class="work-logo work-logo-accent" src="roach-logo.png" alt=""></span><span class="work-company">Roach Capital</span></a><span class="work-meta"><span class="work-role">Investor, </span><span class="work-years">2019 - Current</span></span></span></li>
+					<li class="work-item"><span class="work-details"><a class="work-identity" href="https://www.snap.com/" target="_blank" rel="noopener noreferrer"><span class="work-icon" aria-hidden="true"><img class="work-logo" src="assets/work/snap.svg" alt=""><img class="work-logo work-logo-accent" src="assets/work/snap-outline.svg" alt=""></span><span class="work-company">Snap Inc.</span></a><span class="work-meta"><span class="work-role">AR Shopping, Payments, </span><span class="work-years">2020 - 2021</span></span></span></li>
+					<li class="work-item"><span class="work-details"><a class="work-identity" href="https://www.shopify.com/" target="_blank" rel="noopener noreferrer"><span class="work-icon" aria-hidden="true"><img class="work-logo" src="assets/work/shopify.svg" alt=""><img class="work-logo work-logo-accent" src="assets/work/shopify.svg" alt=""></span><span class="work-company">Shopify</span></a><span class="work-meta"><span class="work-role">Shopify Point of Sale, App Platform, </span><span class="work-years">2016 - 2020</span></span></span></li>
+					<li class="work-item"><span class="work-details"><a class="work-identity" href="https://www.utoronto.ca/news/pay-summerlicious-restaurant-meals-and-more-tap-finger-u-t-alumni-startup-tab" target="_blank" rel="noopener noreferrer"><span class="work-icon" aria-hidden="true"><img class="work-logo" src="assets/work/tab-payments.svg" alt=""><img class="work-logo work-logo-accent" src="assets/work/tab-payments.svg" alt=""></span><span class="work-company">Tab Payments</span></a><span class="work-meta"><span class="work-role">Co-Founder, </span><span class="work-years">2013 - 2015</span></span></span></li>
+					<li class="work-item"><span class="work-details"><a class="work-identity" href="https://www.utoronto.ca/news/u-t-undergraduate-entrepreneurs-sell-web-services-startup" target="_blank" rel="noopener noreferrer"><span class="work-icon" aria-hidden="true"><img class="work-logo" src="assets/work/chime.svg" alt=""><img class="work-logo work-logo-accent" src="assets/work/chime.svg" alt=""></span><span class="work-company">Chime</span></a><span class="work-meta"><span class="work-role">Co-Founder, </span><span class="work-years">2011 - 2013</span></span></span></li>
+					<li class="work-item"><span class="work-details"><a class="work-identity" href="https://www.microsoft.com/" target="_blank" rel="noopener noreferrer"><span class="work-icon" aria-hidden="true"><img class="work-logo" src="assets/work/microsoft.svg" alt=""><img class="work-logo work-logo-accent" src="assets/work/microsoft.svg" alt=""></span><span class="work-company">Microsoft</span></a><span class="work-meta"><span class="work-role">Intern, </span><span class="work-years">2011 - 2012</span></span></span></li>
+					<li class="work-item"><span class="work-details"><a class="work-identity" href="https://www.utoronto.ca/" target="_blank" rel="noopener noreferrer"><span class="work-icon" aria-hidden="true"><img class="work-logo" src="assets/work/university-of-toronto.png" alt=""><img class="work-logo work-logo-accent" src="assets/work/university-of-toronto.png" alt=""></span><span class="work-company">University of Toronto</span></a><span class="work-meta"><span class="work-role">Computer Science, </span><span class="work-years">2010</span></span></span></li>
+					<li class="work-item"><span class="work-details"><a class="work-identity" href="https://uwaterloo.ca/" target="_blank" rel="noopener noreferrer"><span class="work-icon" aria-hidden="true"><img class="work-logo" src="assets/work/university-of-waterloo.png" alt=""><img class="work-logo work-logo-accent" src="assets/work/university-of-waterloo.png" alt=""></span><span class="work-company">University of Waterloo</span></a><span class="work-meta"><span class="work-role">Math, </span><span class="work-years">2006</span></span></span></li>
+				</ul>
+			</section>
+
 			<section class="section" aria-labelledby="investments-heading">
 				<h2 class="section-label" id="investments-heading" style="font-size: inherit;">Investments</h2>
 				<div class="investments-scroll" role="region" aria-label="Investments table" tabindex="0">
